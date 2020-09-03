@@ -13,13 +13,16 @@ Together may we two relish (our studies);
 Together may we two perform (our studies) with vigour;
 May what has been studied by us be filled with the brilliance (of understanding); may it not give rise to hostility.
 Om Peace, Peace, Peace.
-- From the Taittirya Upanishad (तैत्तिरीय उपनिषद्) of the Yajur Veda (यजुर्वेदः)
+
+\- From the Taittiriya Upanishad (तैत्तिरीय उपनिषद्) of the Yajur Veda (यजुर्वेदः)
 
 योगेन चित्तस्य पदेन वाचां मलं शरीरस्य च वैद्यकेन । 
 योपाकरोत्तं प्रवरं मुनीनां पतञ्जलिं प्राञ्जलिरानतोस्मि ॥
 
 The impurities of the mind by yoga, speech by grammar and the impurities of the body through medical science,
 he who is an expert in removing the impurities, to that most excellent of munis, Patanjali, I bow down with folded hands.
+
+\- From a verse in Shivarama's 18th century CE text **XXX: fix reference **
 
 ## Sankalpa (संकल्पः) - Intention Setting 
 
