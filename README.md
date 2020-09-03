@@ -2,11 +2,13 @@
 
 ## Prarthana (प्रार्थना) - Prayers 
 
+```
 ॐ सह नाववतु ।
 सह नौ भुनक्तु ।
 सह वीर्यं करवावहै ।
 तेजस्वि नावधीतमस्तु मा विद्विषावहै ।
 ॐ शान्तिः शान्तिः शान्तिः ॥
+```
 
 Om, together may we two (the teacher and the student) move (in our studies);
 Together may we two relish (our studies);
@@ -16,8 +18,10 @@ Om Peace, Peace, Peace.
 
 \- From the Taittiriya Upanishad (तैत्तिरीय उपनिषद्) of the Yajur Veda (यजुर्वेदः)
 
+```
 योगेन चित्तस्य पदेन वाचां मलं शरीरस्य च वैद्यकेन । 
 योपाकरोत्तं प्रवरं मुनीनां पतञ्जलिं प्राञ्जलिरानतोस्मि ॥
+```
 
 The impurities of the mind by yoga, speech by grammar and the impurities of the body through medical science,
 he who is an expert in removing the impurities, to that most excellent of munis, Patanjali, I bow down with folded hands.
@@ -26,12 +30,14 @@ he who is an expert in removing the impurities, to that most excellent of munis,
 
 ## Sankalpa (संकल्पः) - Intention Setting 
 
+```
 For removing all problems and pains in life,
-for making Lord Parameshwara happy
-for the blessings and grace of Goddess Parvathi
+for making Lord Parameshwara happy,
+for the blessings and grace of Goddess Parvathi,
 for the realization of the Self, and
 for the peace and prosperity of all beings,
 I am going to study the Yoga Sutras of Patanjali.
+```
 
 ## Overview 
 
