@@ -1,20 +1,52 @@
-# pys: The Yoga Sutras of Patanjali
+# pys: Patanjala Yogasutrani (पातञ्जल योगसुत्राणि) - The Yoga Sutras of Patanjali
 
-XXX: Fix ITRANS spelling of sanskrit words used above and provide Sanskrit spelling in unicode
-XXX: Add prayers and sankalpa
+## Prarthana (प्रार्थना) - Prayers 
 
-This repository will include resources for the study of the yoga sutras of Patanjali. For each verse, we plan to include:
+ॐ सह नाववतु ।
+सह नौ भुनक्तु ।
+सह वीर्यं करवावहै ।
+तेजस्वि नावधीतमस्तु मा विद्विषावहै ।
+ॐ शान्तिः शान्तिः शान्तिः ॥
+
+Om, together may we two (the teacher and the student) move (in our studies);
+Together may we two relish (our studies);
+Together may we two perform (our studies) with vigour;
+May what has been studied by us be filled with the brilliance (of understanding); may it not give rise to hostility.
+Om Peace, Peace, Peace.
+- From the Taittirya Upanishad (तैत्तिरीय उपनिषद्) of the Yajur Veda (यजुर्वेदः)
+
+योगेन चित्तस्य पदेन वाचां मलं शरीरस्य च वैद्यकेन । 
+योपाकरोत्तं प्रवरं मुनीनां पतञ्जलिं प्राञ्जलिरानतोस्मि ॥
+
+The impurities of the mind by yoga, speech by grammar and the impurities of the body through medical science,
+he who is an expert in removing the impurities, to that most excellent of munis, Patanjali, I bow down with folded hands.
+
+## Sankalpa (संकल्पः) - Intention Setting 
+
+For removing all problems and pains in life,
+for making Lord Parameshwara happy
+for the blessings and grace of Goddess Parvathi
+for the realization of the Self, and
+for the peace and prosperity of all beings,
+I am going to study the Yoga Sutras of Patanjali.
+
+## Overview 
+
+This repository will include resources for the study of the yoga sutras of Patanjali. Although the Patanjala yoga darshana is limited to using pratyaksha, anumana, and agama, we include translations and references to works by those who apply a vedantic interpretation (admitting upama, anupalabdhi, and athApatti as pramanas). Although the Patanjala Yoga Darshana is Agamic, we do not exclude translations and references to other Nigamic, Smriti, and Puranic sources; nor do we exclude sources from other Dharmic traditions such as Jaina, Bauddha, Veerashaiva, and Sikh, or other translators viewing this text through occidental or other hybrid lenses. This is a work in progress.
+
+For navigation, we will include a verse locator table. We plan to include bibliographic references, as well as a Sanskrit word index with occurrence counts and cross-references to verses.
+
+For each verse, we plan to include the following:
   * Chapter number 
   * Verse number
   * Verse in sanskrit (unicode)
-  * Transliteration tool and output: Unicode hex, ITRANS, possibly others such as IAST 
-  * Parse tree
+  * Transliteration tool and output: Unicode hex, ITRANS, possibly others such as IAST
   * Word meanings
      * Preferred meaning(s)
      * Reference to Apte reference
      * Reference to Monier Williams
   * Translations
-     * Veda  Vyasa w/ Gangananda Jha translation
+     * Maharshi Veda Vyasa w/ Gangananda Jha translation
      * Swami Vivekanananda
      * Swami Satchidananda
      * Others:
@@ -24,18 +56,10 @@ This repository will include resources for the study of the yoga sutras of Patan
         * Christopher Isherwood
         * Swami Venkatesananda
         * Jaganath Carera
-        * Swami Jnaneswara Bharati 
+        * Swami Jnaneswara Bharati
+        * Yoga Madhvacharya (Michael Beloved)
   * Cross-references to related sutras
+  * Grammatical Analysis
   * Audio recording
-  * Connections to BG, Yoga Upanishads, other texts such as Hatha Yoga Pradeepika, Yoga Vashista, and 
   * Notes
-
-For navigation and reference, we plan to include: 
-  * Verse locator table
-  * Word index with occurrence counts and references to verses in which the word occurs
-  * Bibliographic references
-
-Although the Patanjala yoga darshana is limited to using pratyaksha, anumana, and agama, we include translations (but will omit commentaries) and references to works by those who apply a vedantic interpretation (admitting upama, anupalabdhi, and athApatti). Although the Patanjala yoga darshana is agamic, translations and references to nigamic, smriti, and puranic sources are not excluded; nor do we exclude other Dharmic traditions (Jaina, Bauddha, Veerashaiva, and Sikh) or those with occidental/hybrid lenses.
-
-This work has just commenced and will evolve slowly.
-
+  * Connections to BG, Yoga Upanishads, Bhagavadgita, Hatha Yoga Pradeepika, Yoga Vashista, and other texts
