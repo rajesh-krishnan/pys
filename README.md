@@ -1,4 +1,4 @@
-# pys: Patanjala Yogasutrani (पातञ्जल योगसुत्राणि) - The Yoga Sutras of Patanjali
+# pys: Patanjala Yogasutrani (पातञ्जल योगसुत्राणि)
 
 ## Prarthana (प्रार्थना) - Prayers 
 
@@ -61,5 +61,5 @@ For each verse, we plan to include the following:
   * Cross-references to related sutras
   * Grammatical Analysis
   * Audio recording
-  * Notes
+  * Editor's Notes
   * Connections to BG, Yoga Upanishads, Bhagavadgita, Hatha Yoga Pradeepika, Yoga Vashista, and other texts
