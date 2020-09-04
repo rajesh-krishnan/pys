@@ -15,7 +15,7 @@ var pada1 = {
 "padaE": "Chapter 1: On Concentration",
 
 1:{
-"patanjali":     "atha yogAnushAsanam ||",
+"patanjali":     "atha yogAnushAsanam ||1||",
 "vivekananda":   "Now concentration is explained.",
 "satchidananda": "Now the exposition of Yoga is being made.",
 "vyasa":         "athetyayamadhikArArthaH | yogAnushAsanaM shAstramadhikRRitaM veditavyam ||",
@@ -25,7 +25,7 @@ var pada1 = {
 "cisherwood":    "This is the beginning of instruction in yoga.",
 "tkvdesikachar": "Here begins the authoritative instruction on Yoga.",
 "jnanesvara":    "Now, after having done prior preparation through life and other practices, the study and practice of Yoga begins.",
-"pradeepaka":    "",
+"pradeepaka":    "And now begins (atha) the instruction (anusasanam) regarding Yoga (yoga)",
 "meanings":      "",
 "grammar":       "",
 "notes":         "",
@@ -35,7 +35,7 @@ var pada1 = {
 },
 
 2:{
-"patanjali":     "yogashchittavRRittinirodhaH ||",
+"patanjali":     "yogashchittavRRittinirodhaH ||2||",
 "vivekananda":   "Yoga is restraining the mind - stuff (Chitta) from taking various forms (Vrittis).",
 "satchidananda": "The restraint of the modifications of the mind-stuff is Yoga.",
 "vyasa":         "",

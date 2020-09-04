@@ -42,6 +42,10 @@ function f() {
   document.getElementById("audio").innerHTML          = d ? d["audio"] : "";
 };
 </script>
+<style>
+table, td { border: 1px solid black; }
+</style>
+
 </head>
 
 <body>
@@ -54,30 +58,31 @@ function f() {
 <input type="button" name="go" id="go" value="Go" onclick="f()" />
 <p>
 
-<table>
-<tr><th style="text-align:left">Chapter:</th>             <th id="chapter" style="text-align:left">             </th></tr>
-<tr><td width="180px">Patanjali (Devanagari):</td>        <td id="punicode" width="600px">                      </td></tr>
-<tr><td>Patanjali (ITRANS):</td>                          <td id="pitrans">                                     </td></tr>
-<tr><td>Patanjali (IAST):</td>                            <td id="piast">                                       </td></tr>
-<tr><td>Maharishi Vyasa (Devanagari):</td>                <td id="vunicode">                                    </td></tr>
-<tr><td>Maharishi Vyasa (ITRANS):</td>                    <td id="vitrans">                                     </td></tr>
-<tr><td>Maharishi Vyasa (IAST):</td>                      <td id="viast">                                       </td></tr>
-<tr><td>Ganganath Jha on Patanjali:</td>                  <td id="ganganathP">                                  </td></tr>
-<tr><td>Ganganath Jha on Vyasa:</td>                      <td id="ganganathV">                                  </td></tr>
-<tr><td>Swami Satchidananda:</td>                         <td id="satchidananda">                               </td></tr>
-<tr><td>Swami Vivekananda:</td>                           <td id="vivekananda">                                 </td></tr>
-<tr><td>B.K.S. Iyengar:</td>                              <td id="bksiyengar">                                  </td></tr>
-<tr><td>Chris Isherwood:</td>                             <td id="cisherwood">                                  </td></tr>
-<tr><td>T.K.V. Desikachar:</td>                           <td id="tkvdesikachar">                               </td></tr>
-<tr><td>Swami Jnanesvara Bharati:</td>                    <td id="jnanesvara">                                  </td></tr>
-<tr><td>Gabriel Pradeepaka:</td>                          <td id="pradeepaka">                                  </td></tr>
-<tr><td>Word Meanings:</td>                               <td id="meanings">                                    </td></tr>
-<tr><td>Grammatical Analysis:</td>                        <td id="grammar">                                     </td></tr>
-<tr><td>Notes:</td>                                       <td id="notes">                                       </td></tr>
-<tr><td>Cross References:</td>                            <td id="xref">                                        </td></tr>
-<tr><td>External References:</td>                         <td id="refs">                                        </td></tr>
-<tr><td>Audio:</td>                                       <td id="audio">                                       </td></tr>
-</table>
+<table width="850" style="border-collapse:collapse;">
+
+<tr><th style="text-align:left">_</th>                     <th id="chapter" style="text-align:left"> </th></tr>
+<tr><td width="200">Patanjali (Devanagari):</td>          <td id="punicode" width="600">            </td></tr>
+<tr><td>Patanjali (ITRANS):</td>                          <td id="pitrans">                         </td></tr>
+<tr><td>Patanjali (IAST):</td>                            <td id="piast">                           </td></tr>
+<tr><td>Maharishi Vyasa (Devanagari):</td>                <td id="vunicode">                        </td></tr>
+<tr><td>Maharishi Vyasa (ITRANS):</td>                    <td id="vitrans">                         </td></tr>
+<tr><td>Maharishi Vyasa (IAST):</td>                      <td id="viast">                           </td></tr>
+<tr><td>Ganganath Jha on Patanjali:</td>                  <td id="ganganathP">                      </td></tr>
+<tr><td>Ganganath Jha on Vyasa:</td>                      <td id="ganganathV">                      </td></tr>
+<tr><td>Swami Satchidananda:</td>                         <td id="satchidananda">                   </td></tr>
+<tr><td>Swami Vivekananda:</td>                           <td id="vivekananda">                     </td></tr>
+<tr><td>B.K.S. Iyengar:</td>                              <td id="bksiyengar">                      </td></tr>
+<tr><td>Chris Isherwood:</td>                             <td id="cisherwood">                      </td></tr>
+<tr><td>T.K.V. Desikachar:</td>                           <td id="tkvdesikachar">                   </td></tr>
+<tr><td>Swami Jnanesvara Bharati:</td>                    <td id="jnanesvara">                      </td></tr>
+<tr><td>Gabriel Pradeepaka:</td>                          <td id="pradeepaka">                      </td></tr>
+<tr><td>Word Meanings:</td>                               <td id="meanings">                        </td></tr>
+<tr><td>Grammatical Analysis:</td>                        <td id="grammar">                         </td></tr>
+<tr><td>Notes:</td>                                       <td id="notes">                           </td></tr>
+<tr><td>Cross References:</td>                            <td id="xref">                            </td></tr>
+<tr><td>External References:</td>                         <td id="refs">                            </td></tr>
+<tr><td>Audio:</td>                                       <td id="audio">                           </td></tr>
+</table
 
 </body>
 </html>
