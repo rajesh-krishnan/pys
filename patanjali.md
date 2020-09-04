@@ -10,10 +10,12 @@ file, so all markdown content is kept within comments.
 */
 
 var pada1 = {
+
 1:{
-"unicode":       "\u0905\u0925\u0020\u092f\u094b\u0917\u093e\u0928\u0941\u0936\u093e\u0938\u0928\u092e\u094d",
+"itrans":        "atha yogAnushAsanam",
 "satchidananda": "Now the exposition of Yoga is being made.",
 },
+
 };
 
 /*
@@ -24,8 +26,10 @@ var pada1 = {
 */
 
 var pada2 = {
+
 1:{
 },
+
 };
 
 /*
@@ -36,8 +40,10 @@ var pada2 = {
 */
 
 var pada3 = {
+
 1:{
 },
+
 };
 
 /*
@@ -48,8 +54,10 @@ var pada3 = {
 */
 
 var pada4 = {
+
 1:{
-}
+},
+
 };
 
 var patanjali_data = { 1:pada1, 2:pada2, 3:pada3, 4:pada4 };
