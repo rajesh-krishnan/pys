@@ -65,4 +65,4 @@ Once the original text is input, for each verse, we plan to provide the followin
   10. Grammatical analysis
   11. Audio enunciation
 
-To reduce the cognitive burden, we plan to make the subset of information displayed user-selectable. We plan to include bibliographic references, as well as a Sanskrit word index with occurrence counts and cross-references to verses. For the audio enunciation of each verse, it is to be determined whether the editor will record this, or use a text to speech tool. Similarly, it is to be determined whether the grammatical analysis is to be done manually, or by computer.
+To reduce the cognitive burden, we plan to make the subset of information displayed user-selectable. We plan to include bibliographic references, as well as a Sanskrit word index with occurrence counts and cross-references to verses. For the audio enunciation of each verse, it is to be determined whether the editor will record this, or use a text to speech tool. Similarly, it is to be determined whether the grammatical analysis is to be done manually, or by computer. Also, another thing to do is to fix this document to use ITRANS consistently for Sanskrit words.
