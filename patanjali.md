@@ -20,7 +20,7 @@ var pada1 = {
 ```
 ## Sadhana Pada
 
-````
+```
 */
 
 var pada2 = {
@@ -34,6 +34,7 @@ var pada2 = {
 
 ```
 */
+
 var pada3 = {
 1:{
 },
@@ -45,6 +46,7 @@ var pada3 = {
 
 ```
 */
+
 var pada4 = {
 1:{
 }
