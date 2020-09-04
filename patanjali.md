@@ -6,8 +6,9 @@ It is intended to double as a markdown file as well as a Javascript
 file, so all markdown content is kept within comments.
 
 ## Samadhi Pada
+
 ```
-*/
+*/ 
 
 var pada1 = {
 
@@ -16,10 +17,11 @@ var pada1 = {
 "satchidananda": "Now the exposition of Yoga is being made.",
 },
 
-};
+}; 
 
 /*
 ```
+
 ## Sadhana Pada
 
 ```
@@ -34,6 +36,7 @@ var pada2 = {
 
 /*
 ```
+
 ## Vibhuti Pada
 
 ```
@@ -48,6 +51,7 @@ var pada3 = {
 
 /*
 ```
+
 ## Kaivalya Pada
 
 ```
