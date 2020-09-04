@@ -11,13 +11,35 @@
 <script src="patanjali.md" type="text/javascript"></script>
 <script type="text/javascript">
 function f() {
-  var d = patanjali_data[document.getElementById("pada").value][document.getElementById("sutra").value];
-  var u = d ? INtranslit["itrans2u"](d["itrans"]) : "";
+  var cS = patanjali_data[document.getElementById("pada").value]['padaS'];
+  var cE = patanjali_data[document.getElementById("pada").value]['padaE'];
+  var d  = patanjali_data[document.getElementById("pada").value][document.getElementById("sutra").value];
+  var p  = d ? INtranslit["itrans2u"](d["patanjali"]) : "";
+  var v  = d ? INtranslit["itrans2u"](d["vyasa"]) : "";
 
-  document.getElementById("unicode").innerHTML       = INtranslit["u2devanagari"](u);
-  document.getElementById("itrans").innerHTML        = INtranslit["u2itrans"](u);
-  document.getElementById("iast").innerHTML          = INtranslit["u2iast"](u);
-  document.getElementById("satchidananda").innerHTML = d ? d["satchidananda"] : "";
+  document.getElementById("chapter").innerHTML        = cS ? INtranslit["u2devanagari"](INtranslit["itrans2u"](cS)) + " = " + cE : "";
+
+  document.getElementById("punicode").innerHTML       = INtranslit["u2devanagari"](p);
+  document.getElementById("pitrans").innerHTML        = INtranslit["u2itrans"](p);
+  document.getElementById("piast").innerHTML          = INtranslit["u2iast"](p);
+  document.getElementById("vunicode").innerHTML       = INtranslit["u2devanagari"](v);
+  document.getElementById("vitrans").innerHTML        = INtranslit["u2itrans"](v);
+  document.getElementById("viast").innerHTML          = INtranslit["u2iast"](v);
+  document.getElementById("satchidananda").innerHTML  = d ? d["satchidananda"] : "";
+  document.getElementById("vivekananda").innerHTML    = d ? d["vivekananda"] : "";
+  document.getElementById("ganganathP").innerHTML     = d ? d["ganganathP"] : "";
+  document.getElementById("ganganathV").innerHTML     = d ? d["ganganathV"] : "";
+  document.getElementById("bksiyengar").innerHTML     = d ? d["bksiyengar"] : "";
+  document.getElementById("cisherwood").innerHTML     = d ? d["cisherwood"] : "";
+  document.getElementById("tkvdesikachar").innerHTML  = d ? d["tkvdesikachar"] : "";
+  document.getElementById("jnanesvara").innerHTML     = d ? d["jnanesvara"] : "";
+  document.getElementById("pradeepaka").innerHTML     = d ? d["pradeepaka"] : "";
+  document.getElementById("meanings").innerHTML       = d ? d["meanings"] : "";
+  document.getElementById("grammar").innerHTML        = d ? d["grammar"] : "";
+  document.getElementById("notes").innerHTML          = d ? d["notes"] : "";
+  document.getElementById("xref").innerHTML           = d ? d["xref"] : "";
+  document.getElementById("refs").innerHTML           = d ? d["refs"] : "";
+  document.getElementById("audio").innerHTML          = d ? d["audio"] : "";
 };
 </script>
 </head>
@@ -33,13 +55,29 @@ function f() {
 <p>
 
 <table>
-<tr><td>Patanjali (Devanagari):</td>  <td id="unicode" width="500"> </td></tr>
-<tr><td>Patanjali (ITRANS):</td>      <td id="itrans">              </td></tr>
-<tr><td>Patanjali (IAST):</td>        <td id="iast">                </td></tr>
-<tr><td>Swami Satchidananda:</td>     <td id="satchidananda">       </td></tr>
+<tr><th style="text-align:left">Chapter:</th>             <th id="chapter" style="text-align:left">             </th></tr>
+<tr><td width="180px">Patanjali (Devanagari):</td>        <td id="punicode" width="600px">                      </td></tr>
+<tr><td>Patanjali (ITRANS):</td>                          <td id="pitrans">                                     </td></tr>
+<tr><td>Patanjali (IAST):</td>                            <td id="piast">                                       </td></tr>
+<tr><td>Maharishi Vyasa (Devanagari):</td>                <td id="vunicode">                                    </td></tr>
+<tr><td>Maharishi Vyasa (ITRANS):</td>                    <td id="vitrans">                                     </td></tr>
+<tr><td>Maharishi Vyasa (IAST):</td>                      <td id="viast">                                       </td></tr>
+<tr><td>Ganganath Jha on Patanjali:</td>                  <td id="ganganathP">                                  </td></tr>
+<tr><td>Ganganath Jha on Vyasa:</td>                      <td id="ganganathV">                                  </td></tr>
+<tr><td>Swami Satchidananda:</td>                         <td id="satchidananda">                               </td></tr>
+<tr><td>Swami Vivekananda:</td>                           <td id="vivekananda">                                 </td></tr>
+<tr><td>B.K.S. Iyengar:</td>                              <td id="bksiyengar">                                  </td></tr>
+<tr><td>Chris Isherwood:</td>                             <td id="cisherwood">                                  </td></tr>
+<tr><td>T.K.V. Desikachar:</td>                           <td id="tkvdesikachar">                               </td></tr>
+<tr><td>Swami Jnanesvara Bharati:</td>                    <td id="jnanesvara">                                  </td></tr>
+<tr><td>Gabriel Pradeepaka:</td>                          <td id="pradeepaka">                                  </td></tr>
+<tr><td>Word Meanings:</td>                               <td id="meanings">                                    </td></tr>
+<tr><td>Grammatical Analysis:</td>                        <td id="grammar">                                     </td></tr>
+<tr><td>Notes:</td>                                       <td id="notes">                                       </td></tr>
+<tr><td>Cross References:</td>                            <td id="xref">                                        </td></tr>
+<tr><td>External References:</td>                         <td id="refs">                                        </td></tr>
+<tr><td>Audio:</td>                                       <td id="audio">                                       </td></tr>
 </table>
-
-<textarea id="i-input-text" style="display:none;" />
 
 </body>
 </html>
