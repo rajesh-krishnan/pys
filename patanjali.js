@@ -14,6 +14,8 @@ var x       = "patanjali";
 p[1][1][x]  = "atha yogAnushAsanam ||1.1||";
 p[1][2][x]  = "yogashchittavRRittinirodhaH ||1.2||";
 p[1][3][x]  = "tadA drashTuH svarUpe'vasthAnam ||1.3||";
+p[1][4][x]  = "vRRittisArUpyamitaratra ||1.4||";
+p[1][5][x]  = "vRRittayaH pa~nchatayyaH kliShTA aklishTAH ||1.5||";
 
 /********************************************************************************************************************************/
 var x       = "satchidananda";
