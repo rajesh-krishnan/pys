@@ -13,7 +13,7 @@ for (j=1; j<=4; j++) { for (i=1; i<=p[j]["cnt"]; i++) p[j][i] = {}; };
 var x       = "patanjali";
 p[1][1][x]  = "atha yogAnushAsanam ||1.1||";
 p[1][2][x]  = "yogashchittavRRittinirodhaH ||1.2||";
-p[1][3][x]  = "tadA drashTuH svarUpe avasthAnam ||1.3||";
+p[1][3][x]  = "tadA drashTuH svarUpe'vasthAnam ||1.3||";
 
 /********************************************************************************************************************************/
 var x       = "satchidananda";
