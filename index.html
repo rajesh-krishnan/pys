@@ -4,47 +4,43 @@
 <title>The Yoga Sutras of Patanjali</title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 
+<style>
+table, td { border: 1px solid black; }
+</style>
+
 <script src="convert-data-sa.js"  type="text/javascript"></script>
 <script src="convert-in.js"       type="text/javascript"></script>
-<script src="patanjali.md"        type="text/javascript"></script>
+<script src="patanjali.js"        type="text/javascript"></script>
 
-<script src="patanjali.md" type="text/javascript"></script>
 <script type="text/javascript">
 function f() {
-  var cS = patanjali_data[document.getElementById("pada").value]['padaS'];
-  var cE = patanjali_data[document.getElementById("pada").value]['padaE'];
+  var cS = patanjali_data[document.getElementById("pada").value]['pS'];
+  var cE = patanjali_data[document.getElementById("pada").value]['pE'];
+  document.getElementById("chapter").innerHTML = cS ? INtranslit["u2devanagari"](INtranslit["itrans2u"](cS)) + " = " + cE : "";
+
   var d  = patanjali_data[document.getElementById("pada").value][document.getElementById("sutra").value];
-  var p  = d ? INtranslit["itrans2u"](d["patanjali"]) : "";
-  var v  = d ? INtranslit["itrans2u"](d["vyasa"]) : "";
-
-  document.getElementById("chapter").innerHTML        = cS ? INtranslit["u2devanagari"](INtranslit["itrans2u"](cS)) + " = " + cE : "";
-
+  var p  = d["patanjali"] ? INtranslit["itrans2u"](d["patanjali"]) : "";
+  var v  = d["vyasa"]     ? INtranslit["itrans2u"](d["vyasa"])     : "";
   document.getElementById("punicode").innerHTML       = INtranslit["u2devanagari"](p);
   document.getElementById("pitrans").innerHTML        = INtranslit["u2itrans"](p);
   document.getElementById("piast").innerHTML          = INtranslit["u2iast"](p);
   document.getElementById("vunicode").innerHTML       = INtranslit["u2devanagari"](v);
   document.getElementById("vitrans").innerHTML        = INtranslit["u2itrans"](v);
   document.getElementById("viast").innerHTML          = INtranslit["u2iast"](v);
-  document.getElementById("satchidananda").innerHTML  = d ? d["satchidananda"] : "";
-  document.getElementById("vivekananda").innerHTML    = d ? d["vivekananda"] : "";
-  document.getElementById("ganganathV").innerHTML     = d ? d["ganganathV"] : "";
-  document.getElementById("ganganathP").innerHTML     = d ? d["ganganathP"] : "";
-  document.getElementById("bksiyengar").innerHTML     = d ? d["bksiyengar"] : "";
-  document.getElementById("cisherwood").innerHTML     = d ? d["cisherwood"] : "";
-  document.getElementById("tkvdesikachar").innerHTML  = d ? d["tkvdesikachar"] : "";
-  document.getElementById("jnanesvara").innerHTML     = d ? d["jnanesvara"] : "";
-  document.getElementById("pradeepaka").innerHTML     = d ? d["pradeepaka"] : "";
-  document.getElementById("meanings").innerHTML       = d ? d["meanings"] : "";
-  document.getElementById("grammar").innerHTML        = d ? d["grammar"] : "";
-  document.getElementById("notes").innerHTML          = d ? d["notes"] : "";
-  document.getElementById("xref").innerHTML           = d ? d["xref"] : "";
-  document.getElementById("refs").innerHTML           = d ? d["refs"] : "";
-  document.getElementById("audio").innerHTML          = d ? d["audio"] : "";
+
+  function g(x,idx) { document.getElementById(x).innerHTML = d[x] ? d[x] : ""; }
+  var flds = [ "ganganathV", "ganganathP", "satchidananda", "vivekananda", 
+               "bksiyengar", "cisherwood", "tkvdesikachar", "jnanesvara", "pradeepaka", 
+               "meanings", "grammar", "notes", "xref", "refs", "audio", ];
+  flds.forEach(g);
+};
+function Translit() { 
+  var q = INtranslit["itrans2u"](document.getElementById("ttitrans").value);
+  document.getElementById("ttdevan").innerHTML = INtranslit["u2devanagari"](q);
+  document.getElementById("ttiast").innerHTML  = INtranslit["u2iast"](q);
 };
 </script>
-<style>
-table, td { border: 1px solid black; }
-</style>
+
 
 </head>
 
@@ -59,30 +55,37 @@ table, td { border: 1px solid black; }
 <p>
 
 <table width="850" style="border-collapse:collapse;">
+<tr><th style="text-align:left">_</th>            <th id="chapter" style="text-align:left"> </th></tr>
+<tr><td width="200">Patanjali (Devanagari):</td>  <td id="punicode" width="600">            </td></tr>
+<tr><td>Patanjali (ITRANS):</td>                  <td id="pitrans">                         </td></tr>
+<tr><td>Patanjali (IAST):</td>                    <td id="piast">                           </td></tr>
+<tr><td>Maharishi Vyasa (Devanagari):</td>        <td id="vunicode">                        </td></tr>
+<tr><td>Maharishi Vyasa (ITRANS):</td>            <td id="vitrans">                         </td></tr>
+<tr><td>Maharishi Vyasa (IAST):</td>              <td id="viast">                           </td></tr>
+<tr><td>Ganganath Jha on Vyasa:</td>              <td id="ganganathV">                      </td></tr>
+<tr><td>Ganganath Jha on Patanjali:</td>          <td id="ganganathP">                      </td></tr>
+<tr><td>Swami Satchidananda:</td>                 <td id="satchidananda">                   </td></tr>
+<tr><td>Swami Vivekananda:</td>                   <td id="vivekananda">                     </td></tr>
+<tr><td>B.K.S. Iyengar:</td>                      <td id="bksiyengar">                      </td></tr>
+<tr><td>Chris Isherwood:</td>                     <td id="cisherwood">                      </td></tr>
+<tr><td>T.K.V. Desikachar:</td>                   <td id="tkvdesikachar">                   </td></tr>
+<tr><td>Swami Jnanesvara Bharati:</td>            <td id="jnanesvara">                      </td></tr>
+<tr><td>Gabriel Pradeepaka:</td>                  <td id="pradeepaka">                      </td></tr>
+<tr><td>Word Meanings:</td>                       <td id="meanings">                        </td></tr>
+<tr><td>Grammatical Analysis:</td>                <td id="grammar">                         </td></tr>
+<tr><td>Notes:</td>                               <td id="notes">                           </td></tr>
+<tr><td>Cross References:</td>                    <td id="xref">                            </td></tr>
+<tr><td>External References:</td>                 <td id="refs">                            </td></tr>
+<tr><td>Audio:</td>                               <td id="audio">                           </td></tr>
+</table>
 
-<tr><th style="text-align:left">_</th>                     <th id="chapter" style="text-align:left"> </th></tr>
-<tr><td width="200">Patanjali (Devanagari):</td>          <td id="punicode" width="600">            </td></tr>
-<tr><td>Patanjali (ITRANS):</td>                          <td id="pitrans">                         </td></tr>
-<tr><td>Patanjali (IAST):</td>                            <td id="piast">                           </td></tr>
-<tr><td>Maharishi Vyasa (Devanagari):</td>                <td id="vunicode">                        </td></tr>
-<tr><td>Maharishi Vyasa (ITRANS):</td>                    <td id="vitrans">                         </td></tr>
-<tr><td>Maharishi Vyasa (IAST):</td>                      <td id="viast">                           </td></tr>
-<tr><td>Ganganath Jha on Vyasa:</td>                      <td id="ganganathV">                      </td></tr>
-<tr><td>Ganganath Jha on Patanjali:</td>                  <td id="ganganathP">                      </td></tr>
-<tr><td>Swami Satchidananda:</td>                         <td id="satchidananda">                   </td></tr>
-<tr><td>Swami Vivekananda:</td>                           <td id="vivekananda">                     </td></tr>
-<tr><td>B.K.S. Iyengar:</td>                              <td id="bksiyengar">                      </td></tr>
-<tr><td>Chris Isherwood:</td>                             <td id="cisherwood">                      </td></tr>
-<tr><td>T.K.V. Desikachar:</td>                           <td id="tkvdesikachar">                   </td></tr>
-<tr><td>Swami Jnanesvara Bharati:</td>                    <td id="jnanesvara">                      </td></tr>
-<tr><td>Gabriel Pradeepaka:</td>                          <td id="pradeepaka">                      </td></tr>
-<tr><td>Word Meanings:</td>                               <td id="meanings">                        </td></tr>
-<tr><td>Grammatical Analysis:</td>                        <td id="grammar">                         </td></tr>
-<tr><td>Notes:</td>                                       <td id="notes">                           </td></tr>
-<tr><td>Cross References:</td>                            <td id="xref">                            </td></tr>
-<tr><td>External References:</td>                         <td id="refs">                            </td></tr>
-<tr><td>Audio:</td>                                       <td id="audio">                           </td></tr>
-</table
+<h2>Transliteration Tool</h2>
+<label for="ttitrans">ITRANS:</label><br>
+<textarea id="ttitrans" rows="2" cols="80" onchange="Translit()"></textarea><br>
+<label for="ttdevan">Devanagari:</label><br>
+<textarea readonly id="ttdevan"  rows="2" cols="80"></textarea><br>
+<label for="ttiast">IAST:</label><br>
+<textarea readonly id="ttiast"  rows="2" cols="80"></textarea><br>
 
 </body>
 </html>
