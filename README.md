@@ -47,19 +47,18 @@ This repository will include resources for the study of the yoga sutras of Patan
 
 For now, we are attempting a client-side solution with static content that can be hosted locally or on a webserver; a modern browser supporting Javascript, HTML, and CSS should suffice. I was originally planning to release this software under the Unlicense, but unfortunately, the transliteration code by [Shreevatsa ji](http://shreevatsa.appspot.com/sanskrit/transliterate.html) has a GPLv2 or higher license. Note I have edited the transliteration code slightly to include the pranava (Om symbol).
 
-All of the machine readable data is in `patanjali.js`. We encode Sanskrit using ITRANS. Through a web page (`index.html`), we support navigation by chapter and verse. For each verse, the web page provides the chapter name, chapter number, verse number, and verse text (in Devnagari Unicode, ITRANS, and IAST formats). For comparison, we provide translations by Swami Satchidananda, B.K.S. Iyengar, T.K.V. Desikachar, Christopher Isherwood (Swami Prabhavananda), and Swami Jnanesvara Bharati. We provide a ITRANS to Devangarai Unicode and IAST transliteration tool.
+All of the machine readable data is in `patanjali.js`. We encode Sanskrit using ITRANS. Through a web page (`index.html`), we support navigation by chapter and verse. For each verse, the web page provides the chapter name, chapter number, verse number, and verse text (in Devnagari Unicode, ITRANS, and IAST formats). For comparison, we provide translations by Swami Vivekananda, Swami Satchidananda, B.K.S. Iyengar, T.K.V. Desikachar, Christopher Isherwood (Swami Prabhavananda), and Swami Jnanesvara Bharati. We provide a ITRANS to Devangarai Unicode and IAST transliteration tool.
 
 ### Future Work
 For each verse, we plan to provide the following, in order: 
-  1. Translation of the verse by Swami Vivekananda
-  2. Maharishi Veda Vyasa's commentary (in Devanagari Unicode, ITRANS, and IAST formats)
-  3. Translation of the verse as well as Vyasa's commentary by Ganganath Jha
-  4. Cross references to related verses
-  5. Related references to BG, Yoga Upanishads, Bhagavadgita, Hatha Yoga Pradeepika, Yoga Vashista, and other texts
-  6. Other modern translations by others, including possibly, Gabriel Pradeepaka, Swami Venkatesananda, Jaganath Carera, Michael Beloved, and others
-  7. Classical translations by Rajabhoja, Shivarama, and others
-  8. Editor's notes
-  9. Grammatical analysis
-  10. Audio enunciation
+  1. Maharishi Veda Vyasa's commentary (in Devanagari Unicode, ITRANS, and IAST formats)
+  2. Translation of the verse as well as Vyasa's commentary by Ganganath Jha
+  3. Cross references to related verses
+  4. Related references to BG, Yoga Upanishads, Bhagavadgita, Hatha Yoga Pradeepika, Yoga Vashista, and other texts
+  5. Other modern translations by others, including possibly, Gabriel Pradeepaka, Swami Venkatesananda, Jaganath Carera, Michael Beloved, and others
+  6. Classical translations by Rajabhoja, Shivarama, and others
+  7. Editor's notes
+  8. Grammatical analysis
+  9. Audio enunciation
 
 For the audio enunciation of each verse, it is to be determined whether the editor will record this, or use a text to speech tool. Similarly, it is to be determined whether the grammatical analysis is to be done manually, or by computer. Also, another thing to do is to fix this document to use ITRANS consistently for Sanskrit words. To reduce the cognitive burden, we plan to make the subset of information displayed user-selectable. We plan to include bibliographic references, as well as a Sanskrit word index with occurrence counts and cross-references to verses. 
