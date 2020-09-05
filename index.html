@@ -45,11 +45,10 @@ function showsutra(nav) {
   //document.getElementById("viast").innerHTML          = INtranslit["u2iast"](v);
 
   function g(x,idx) { var q = patanjali_data[x][pnum][snum]; document.getElementById(x).innerHTML = q ? q : ""; }
-  var flds = ["satchidananda", "bksiyengar", "cisherwood", "tkvdesikachar", "jnanesvara",
-              /* "ganganathV", "ganganathP", "vivekananda", "pradeepaka", */
+  var flds = ["vivekananda", "satchidananda", "bksiyengar", "cisherwood", "tkvdesikachar", "jnanesvara", "pradeepaka",
+              /* "ganganathV", "ganganathP" */
               /* "meanings", "grammar", "notes", "xref", "refs", "audio", */ ];
   flds.forEach(g);
-
 };
 function Translit() { 
   var q = INtranslit["itrans2u"](document.getElementById("ttitrans").value);
@@ -88,11 +87,11 @@ function Translit() {
 <tr><td>Ganganath Jha on Patanjali:</td>          <td id="ganganathP">                      </td></tr>
 <tr><td>Swami Vivekananda:</td>                   <td id="vivekananda">                     </td></tr>
 <tr><td>Swami Satchidananda:</td>                 <td id="satchidananda">                   </td></tr>
+<tr><td>Gabriel Pradeepaka:</td>                  <td id="pradeepaka">                      </td></tr>
 <tr><td>B.K.S. Iyengar:</td>                      <td id="bksiyengar">                      </td></tr>
 <tr><td>Chris Isherwood:</td>                     <td id="cisherwood">                      </td></tr>
 <tr><td>T.K.V. Desikachar:</td>                   <td id="tkvdesikachar">                   </td></tr>
 <tr><td>Swami Jnanesvara Bharati:</td>            <td id="jnanesvara">                      </td></tr>
-<tr><td>Gabriel Pradeepaka:</td>                  <td id="pradeepaka">                      </td></tr>
 <tr><td>Word Meanings:</td>                       <td id="meanings">                        </td></tr>
 <tr><td>Grammatical Analysis:</td>                <td id="grammar">                         </td></tr>
 <tr><td>Notes:</td>                               <td id="notes">                           </td></tr>
