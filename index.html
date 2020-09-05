@@ -13,26 +13,41 @@ table, td { border: 1px solid black; }
 <script src="patanjali.js"        type="text/javascript"></script>
 
 <script type="text/javascript">
-function f() {
-  var cS = patanjali_data[document.getElementById("pada").value]['pS'];
-  var cE = patanjali_data[document.getElementById("pada").value]['pE'];
+function idx_rangechecked(nav) {
+  var pnum = document.getElementById("pada").value  - 1;
+  if (nav=='>>') { pnum += 1; } else if (nav=='<<') { pnum -= 1; };
+  if (pnum < 0)  { pnum = 0; }  else if (pnum > 3) { pnum = 3; } 
+  document.getElementById("pada").value  = pnum + 1; 
+
+  var ccnt = patanjali_data["padas"][pnum]['cnt'];
+  var snum = document.getElementById("sutra").value - 1;
+  if (nav=='>')  { snum += 1; } else if (nav=='<') { snum -= 1; };
+  if (snum < 0)  { snum = 0; } else if (snum >= ccnt) { snum = ccnt - 1; };
+  document.getElementById("sutra").value  = snum + 1;
+  return [pnum,snum];
+};
+function showsutra(nav) {
+  var [pnum,snum] = idx_rangechecked(nav);
+  var cS = patanjali_data["padas"][pnum]['pS'];
+  var cE = patanjali_data["padas"][pnum]['pE'];
   document.getElementById("chapter").innerHTML = cS ? INtranslit["u2devanagari"](INtranslit["itrans2u"](cS)) + " = " + cE : "";
 
-  var d  = patanjali_data[document.getElementById("pada").value][document.getElementById("sutra").value];
-  var p  = d["patanjali"] ? INtranslit["itrans2u"](d["patanjali"]) : "";
-  var v  = d["vyasa"]     ? INtranslit["itrans2u"](d["vyasa"])     : "";
+  var d  = patanjali_data['patanjali'][pnum][snum];
+  var p  = d ? INtranslit["itrans2u"](d) : "";
   document.getElementById("punicode").innerHTML       = INtranslit["u2devanagari"](p);
   document.getElementById("pitrans").innerHTML        = INtranslit["u2itrans"](p);
   document.getElementById("piast").innerHTML          = INtranslit["u2iast"](p);
-  document.getElementById("vunicode").innerHTML       = INtranslit["u2devanagari"](v);
-  document.getElementById("vitrans").innerHTML        = INtranslit["u2itrans"](v);
-  document.getElementById("viast").innerHTML          = INtranslit["u2iast"](v);
 
-  function g(x,idx) { document.getElementById(x).innerHTML = d[x] ? d[x] : ""; }
+  //var v  = d["vyasa"]     ? INtranslit["itrans2u"](d["vyasa"])     : "";
+  //document.getElementById("vunicode").innerHTML       = INtranslit["u2devanagari"](v);
+  //document.getElementById("vitrans").innerHTML        = INtranslit["u2itrans"](v);
+  //document.getElementById("viast").innerHTML          = INtranslit["u2iast"](v);
+
+  //function g(x,idx) { document.getElementById(x).innerHTML = d[x] ? d[x] : ""; }
   var flds = [ "ganganathV", "ganganathP", "satchidananda", "vivekananda", 
                "bksiyengar", "cisherwood", "tkvdesikachar", "jnanesvara", "pradeepaka", 
                "meanings", "grammar", "notes", "xref", "refs", "audio", ];
-  flds.forEach(g);
+  //flds.forEach(g);
 };
 function Translit() { 
   var q = INtranslit["itrans2u"](document.getElementById("ttitrans").value);
@@ -40,7 +55,6 @@ function Translit() {
   document.getElementById("ttiast").innerHTML  = INtranslit["u2iast"](q);
 };
 </script>
-
 
 </head>
 
@@ -51,7 +65,11 @@ function Translit() {
 <input type="number" name="pada" id="pada" size=1 min=1 max=4 value=1 />
 <label for="sutra">Sutra:</label>
 <input type="number" name="sutra" id="sutra" size=2 min=1 max=56 value=1 />
-<input type="button" name="go" id="go" value="Go" onclick="f()" />
+<input type="button" name="go" id="go" value="Go" onclick="showsutra('.')" />
+<input type="button" name="pbwd" id="pbwd" value="<<" onclick="showsutra('<<')" />
+<input type="button" name="sbwd" id="sbwd" value="<"  onclick="showsutra('<')" />
+<input type="button" name="sfwd" id="sfwd" value=">" onclick="showsutra('>')" />
+<input type="button" name="pfwd" id="pfwd" value=">>"  onclick="showsutra('>>')" />
 <p>
 
 <table width="850" style="border-collapse:collapse;">
