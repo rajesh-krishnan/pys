@@ -50,10 +50,17 @@ function showsutra(nav) {
               /* "meanings", "grammar", "notes", "xref", "refs", "audio", */ ];
   flds.forEach(g);
 };
-function Translit() { 
-  var q = INtranslit["itrans2u"](document.getElementById("ttitrans").value);
-  document.getElementById("ttdevan").innerHTML = INtranslit["u2devanagari"](q);
-  document.getElementById("ttiast").innerHTML  = INtranslit["u2iast"](q);
+function Translit(conv) { 
+  var q;
+  if (conv=='>')  {
+    document.getElementById("ttdevan").value = "";
+    q = INtranslit["itrans2u"](document.getElementById("ttitrans").value);
+    document.getElementById("ttdevan").value = INtranslit["u2devanagari"](q);
+  } else if (conv=='<')  {
+    document.getElementById("ttitrans").value = "";
+    q = INtranslit["devanagari2u"](document.getElementById("ttdevan").value);
+    document.getElementById("ttitrans").value = INtranslit["u2itrans"](q);
+  }
 };
 </script>
 
@@ -75,9 +82,9 @@ function Translit() {
 <input type="button" name="pfwd" id="pfwd" value=">>"  onclick="showsutra('>>')" />
 <p>
 
-<table width="850" style="border-collapse:collapse;">
+<table width="1050" style="border-collapse:collapse;">
 <tr><th style="text-align:left">_</th>            <th id="chapter" style="text-align:left"> </th></tr>
-<tr><td width="200">Patanjali (Devanagari):</td>  <td id="punicode" width="600">            </td></tr>
+<tr><td width="250">Patanjali (Devanagari):</td>  <td id="punicode" width="750">            </td></tr>
 <tr><td>Patanjali (ITRANS):</td>                  <td id="pitrans">                         </td></tr>
 <tr><td>Patanjali (IAST):</td>                    <td id="piast">                           </td></tr>
 <tr><td>Maharishi Vyasa (Devanagari):</td>        <td id="vunicode">                        </td></tr>
@@ -100,13 +107,11 @@ function Translit() {
 <tr><td>Audio:</td>                               <td id="audio">                           </td></tr>
 </table>
 
-<h2>Transliteration Tool</h2>
-<label for="ttitrans">ITRANS:</label><br>
-<textarea id="ttitrans" rows="2" cols="80" onchange="Translit()"></textarea><br>
-<label for="ttdevan">Devanagari:</label><br>
-<textarea readonly id="ttdevan"  rows="2" cols="80"></textarea><br>
-<label for="ttiast">IAST:</label><br>
-<textarea readonly id="ttiast"  rows="2" cols="80"></textarea><br>
+<h4>ITRANS-Devnagari Transliteration Tool</h4>
+<textarea id="ttitrans" rows="1" cols="65" spellcheck="false" autocomplete="off"></textarea>
+<input type="button" name="i2d" id="i2d" value="<" onclick="Translit('<')" />
+<input type="button" name="i2d" id="i2d" value=">" onclick="Translit('>')" />
+<textarea id="ttdevan"  rows="1" cols="65" spellcheck="false" autocomplete="off"></textarea>
 
 </body>
 </html>
