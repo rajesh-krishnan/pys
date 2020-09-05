@@ -6,7 +6,7 @@
 <!-- We believe the quotations of others' copyrighted texts are covered under fair use provisions.                             -->
 <!-- ------------------------------------------------------------------------------------------------------------------------- --> 
 <head>
-<title>The Yoga Sutras of Patanjali</title>
+<title>Patanjali's Yoga Sutras: A Study Guide</title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 <!-- ------------------------------------------------------------------------------------------------------------------------- --> 
 <!-- <script src="patanjali.js" type="text/javascript"></script>                                                               -->
@@ -2061,12 +2061,12 @@ function Translit(conv) {
     document.getElementById("ttitrans").value = INtranslit["u2itrans"](q);
   }
 };
-function showMe (it, box) { var vis = (box.checked) ? "block" : "none"; document.getElementById(it).style.display = vis; };
+function showMe(it, box) { var vis = (box.checked) ? "block" : "none"; document.getElementById(it).style.display = vis; };
 </script>
 <!-- ------------------------------------------------------------------------------------------------------------------------- --> 
-<!-- Load personal notes stored in mynotes.js if any                                                                                                -->
+<!-- Load personal notes stored in mynotes.txt if any                                                                                                -->
 <!-- ------------------------------------------------------------------------------------------------------------------------- --> 
-<script src="mynotes.js" type="text/javascript"></script>
+<script src="mynotes.txt" type="text/javascript"></script>
 <!-- ------------------------------------------------------------------------------------------------------------------------- --> 
 <!-- CSS Style Directives                                                                                                      -->
 <!-- ------------------------------------------------------------------------------------------------------------------------- --> 
@@ -2074,8 +2074,63 @@ function showMe (it, box) { var vis = (box.checked) ? "block" : "none"; document
 table, td { border: 1px solid black; }
 </style>
 </head>
-<body>
-<h1>The Yoga Sutras of Patanjali</h1>
+
+<body onload="showsutra('.')">
+<h1>Patanjali's Yoga Sutras: A Study Guide (v. 0.108)</h1>
+<!-- ------------------------------------------------------------------------------------------------------------------------- --> 
+<input type="checkbox" id="cbox0" name="cbox0" value="prayer" onclick="showMe('prayer',this)" />
+<label for="cbox0">Prayer</label>
+<input type="checkbox" id="cbox1" name="cbox1" value="dicttool" onclick="showMe('dicttool',this)" />
+<label for="cbox1">Dictionary</label>
+<input type="checkbox" id="cbox2" name="cbox2" value="translittool" onclick="showMe('translittool',this)" />
+<label for="cbox2">Transliteration</label>
+<input type="checkbox" id="cbox3" name="cbox3" value="about" onclick="showMe('about',this)" />
+<label for="cbox3">About</label>
+<input type="checkbox" id="cbox4" name="cbox4" value="resources" onclick="showMe('resources',this)" />
+<label for="cbox4">Resources</label>
+<p>
+<!-- ------------------------------------------------------------------------------------------------------------------------- --> 
+<div id="prayer" style="display:none">
+<hr>
+<h2>Prarthana (प्रार्थना) - Prayers</h2>
+
+<pre>
+ॐ सह नाववतु ।
+सह नौ भुनक्तु ।
+सह वीर्यं करवावहै ।
+तेजस्वि नावधीतमस्तु मा विद्विषावहै ।
+ॐ शान्तिः शान्तिः शान्तिः ॥
+
+Om, together may we two (the teacher and the student) move (in our studies);
+Together may we two relish (our studies);
+Together may we two perform (our studies) with vigour;
+May what has been studied by us be filled with the brilliance (of understanding); may it not give rise to hostility.
+Om Peace, Peace, Peace.
+
+- From the Taittiriya Upanishad (तैत्तिरीय उपनिषद्) of the Yajur Veda (यजुर्वेदः)
+
+योगेन चित्तस्य पदेन वाचां मलं शरीरस्य च वैद्यकेन । 
+योपाकरोत्तं प्रवरं मुनीनां पतञ्जलिं प्राञ्जलिरानतोस्मि ॥
+
+The impurities of the mind by yoga, speech by grammar and the impurities of the body through medical science,
+he who is an expert in removing the impurities, to that most excellent of munis, Patanjali, I bow down with folded hands.
+
+- From a verse in Shivarama's commentary on the Yoga Sutras c. 18th century CE 
+</pre>
+
+<h2>Sankalpa (संकल्पः) - Intention Setting</h2>
+<pre>
+For removing all problems and pains in life,
+for making Lord Parameshwara happy,
+for the blessings and grace of Goddess Parvathi,
+for the realization of the Self, and
+for the peace and prosperity of all beings,
+I am going to study the Yoga Sutras of Patanjali.
+</pre>
+<hr>
+</div>
+<p>
+<!-- ------------------------------------------------------------------------------------------------------------------------- --> 
 <label for="pada">Pada:</label>
 <input type="number" name="pada" id="pada" size=1 min=1 max=4 value=1 />
 <label for="sutra">Sutra:</label>
@@ -2088,7 +2143,7 @@ table, td { border: 1px solid black; }
 <input type="button" name="pend" id="pend" value="|>"  onclick="showsutra('|>')" />
 <input type="button" name="pfwd" id="pfwd" value=">>"  onclick="showsutra('>>')" />
 <p>
-
+<!-- ------------------------------------------------------------------------------------------------------------------------- --> 
 <table width="1050" style="border-collapse:collapse;">
 <tr><th style="text-align:left">_</th>            <th id="chapter" style="text-align:left"> </th></tr>
 <tr><td width="250">Patanjali (Devanagari):</td>  <td id="punicode" width="750">            </td></tr>
@@ -2116,34 +2171,9 @@ table, td { border: 1px solid black; }
 -->
 </table>
 <p>
-<a style="font-size:12px">The 'Notes:' field loads personal notes from a local file 'mynotes.js'; you can add multiple notes per sutra 
+<a style="font-size:12px">The 'Notes:' field loads personal notes from a local file 'mynotes.txt'; you can add multiple notes per sutra 
 in any order, e.g., to add a note for Pada, Sutra 5: <em>an(2,5,"Test my notes &lt;b&gt;including HTML formatting&lt;/b&gt;");</em></a>
-
-<h2>More Information and Resources</h2>
-<input type="checkbox" id="cbox2" name="cbox2" value="dicttool" onclick="showMe('dicttool',this)" />
-<label for="cbox2">Dictionary</label><br>
-<input type="checkbox" id="cbox1" name="cbox1" value="translittool" onclick="showMe('translittool',this)" />
-<label for="cbox1">Transliteration</label>
-<input type="checkbox" id="cbox0" name="cbox0" value="about" onclick="showMe('about',this)" />
-<label for="cbox0">About</label>
-
-<div id="about" style="display:none">
-<hr>
-<center><b>About</b></center><br>
-For more information, see <a href="https://github.com/rajesh-krishnan/pys">github.com/pys</a>; this is a private repository.
-<hr>
-</div>
-
-<div id="translittool" style="display:none">
-<hr>
-<center><b>ITRANS<=>Devanagari Transliteration</b></center><br>
-<textarea id="ttitrans" rows="1" cols="80" spellcheck="false" autocomplete="off"></textarea>
-<input type="button" name="i2d" id="i2d" value="<" onclick="Translit('<')" />
-<input type="button" name="d2i" id="d2i" value=">" onclick="Translit('>')" />
-<textarea id="ttdevan"  rows="1" cols="80" spellcheck="false" autocomplete="off"></textarea>
-<hr>
-</div>
-
+<!-- ------------------------------------------------------------------------------------------------------------------------- --> 
 <div id="dicttool" style="display:none">
 <hr>
 <object data="https://dsal.uchicago.edu/dictionaries/apte/" width="100%" height="350"> 
@@ -2152,6 +2182,112 @@ Error: Embedded data could not be displayed.
 </object>
 <hr>
 </div>
+<!-- ------------------------------------------------------------------------------------------------------------------------- --> 
+<div id="translittool" style="display:none">
+<hr>
+<h2>ITRANS<=>Devanagari Transliteration</h2>
+<textarea id="ttitrans" rows="1" cols="80" spellcheck="false" autocomplete="off"></textarea>
+<input type="button" name="i2d" id="i2d" value="<" onclick="Translit('<')" />
+<input type="button" name="d2i" id="d2i" value=">" onclick="Translit('>')" />
+<textarea id="ttdevan"  rows="1" cols="80" spellcheck="false" autocomplete="off"></textarea>
+<hr>
+</div>
+<!-- ------------------------------------------------------------------------------------------------------------------------- --> 
+<div id="about" style="display:none">
+<hr>
+<h2>About pys: a study guide to the Patanjala Yogasutrani (पातञ्जल योगसुत्राणि)</h2>
 
+The objective of this work is to support the study of Yoga, which is one of the six astika darshanas of Sanatana Dharma; any academic or technical excursions are incidental to the core pursuit. The associated software repository is private, and is hosted at <a href="https://github.com/rajesh-krishnan/pys">github.com/pys</a>. This is a work in progress. <p>
+
+Although the Patanjala yoga darshana is limited to using pratyaksha, anumana, and agama, we include references to works by those who apply a vedantic interpretation (admitting upama, anupalabdhi, and athApatti as pramanas). Although the Patanjala Yoga Darshana is agamic, we do not exclude translations and references to other nigamic, smriti, and puranic sources; nor do we exclude sources from other traditions. We follow Veda Vyasa, Srimad Adi Shankara Bhagadpada, and Swami Sivananda Sarawasti, who maintain there is harmony between the yoga and vedanta darsharnas. As we do not include full commentaries, and only quote translations from other 
+sources, we believe this constitutes fair use of quoted material. <p>
+
+We encode Sanskrit using ITRANS. Through a web page ('pys.html'), we support navigation by chapter and verse. For each verse, the web page provides the chapter name, chapter number, verse number, and verse text (in Devnagari Unicode, ITRANS, and IAST formats). For comparison, we provide translations by Swami Vivekananda, Swami Satchidananda, Gabriel Pradeepaka, B.K.S. Iyengar, T.K.V. Desikachar, Christopher Isherwood (Swami Prabhavananda), and Swami Jnanesvara Bharati. We provide an interface to a ITRANS to Devangarai Unicode and IAST transliteration tool as well as to an online Sanskrit dictionary. Users can add their notes for each sutra to an optional file, and see them with the included translations.<p>
+
+For now, we are attempting a client-side solution with static content that can be hosted locally or on a webserver; a modern browser supporting Javascript, HTML, and CSS should suffice. I was originally planning to release this software under the Unlicense, but unfortunately, the transliteration code by <a href="http://shreevatsa.appspot.com/sanskrit/transliterate.html">Shreevatsaji</a> has a GPLv2 or higher license. Note I have edited the transliteration code slightly to include the pranava (Om symbol).<p>
+
+<b>Future Work:</b> Future versions of this code may include:
+<ol>
+  <li>Maharishi Veda Vyasa's commentary (in Devanagari Unicode, ITRANS, and IAST formats) along with translations (by Ganganath Jha)</li>
+  <li>Cross references to related verses</li>
+  <li>References to BG, Yoga Upanishads, Bhagavadgita, Hatha Yoga Pradeepika, Yoga Vashista, and other texts</li>
+  <li>Modern translations by others, including possibly,Swami Venkatesananda, Jaganath Carera, Michael Beloved, and others</li>
+  <li>Classical commentaries by Rajabhoja, Shivarama, and others</li>
+</ol>
+
+We are also looking at providing audio enunciation of each verse, either through recordings or the use of a speech-to-text tool. We are also looking at providing grammatical analysis done either manually or by computer.<p>
+<hr>
+</div>
+<!-- ------------------------------------------------------------------------------------------------------------------------- --> 
+<div id="resources" style="display:none">
+<hr>
+<h2>Resources for further study</h2>
+
+We list the major texts on yoga and some commentaries on the Patanjala Yogasutrani. We may provide additional notes and links in the future on yoga texts as well as sanskrit learning resources.<p>
+
+<h3>Major texts on yoga</h3>
+
+<ul>
+<li>Yoga Upanishads
+<ul>
+<li>Hamsa Upanishad</li>
+<li>Amritabindu Upanishad</li>
+<li>Nadabindu Upanishad or Amrita Nada Bindu Upanishad</li>
+<li>Kshurika Upanishad</li>
+<li>Tejobindu Upanishad</li>
+<li>Nadabindu Upanishad</li>
+<li>Dhyanabindu Upanishad</li>
+<li>Brahmavidya Upanishad</li>
+<li>Yogatattva Upanishad</li>
+<li>Trishikhibrahmana Upanishad</li>
+<li>Yogachudamani Upanishad</li>
+<li>Mandala-brahmana Upanishad</li>
+<li>Advayataraka Upanishad
+<ul>
+<li>Patanjali defines Ishvara in terms of Guru; this Upanishad defines Guru</li>
+</ul>
+</li>
+<li>Shandilya Upanishad</li>
+<li>Yogashikha Upanishad</li>
+<li>Pashupatabrahma Upanishad</li>
+<li>Yoga-kundalini Upanishad</li>
+<li>Darshana Upanishad</li>
+<li>Mahavakya Upanishad</li>
+<li>Varaha Upanishad</li>
+</ul>
+</li>
+<li>Srimad Bhagavad Gita</li>
+<li>Patanjala Yogasutrani</li>
+<li>Yoga Vasishta</li>
+<li>Hatha Yoga Pradipika</li>
+<li>Gheranda Samhita</li>
+<li>Shiva Samhita</li>
+</ul>
+
+<h3>Commentaries on Patanjala Yogasutrani</h3>
+
+To avoid misconceptions when reading translations and commentaries, consult a traditional guru who has both scriptural and experiential knowledge; each commentary views the subject through the philosophical lens of a particular school.<p>
+
+<h4>Classical Commentaries</h4>
+<ul>
+<li>Patanjala Yogadarshana by Maharshi Veda Vyasa
+<ul>
+  <li>Commentary on above by Srimad Adi Shankara Bhagavadpada</li>
+</ul>
+</li>
+<li>Rajamarttanda by Raja Bhoja</li>
+<li>... several others</li>
+</ul>
+
+<h4>Modern Translations and Commentaries</h4>
+<ul>
+<li>Raja Yoga by Swami Vivekananda</li>
+<li>The Yoga Sutras of Patanjali by Swami Satchidananda</li>
+<li>Others included in the accompanying tool, including B.K.S. Iyengar, T.K.V. Desikachar, Chris Isherwood, Swami Jnanesvara Bharati, Gabriel Pradeepaka </li>
+<li>... numerous others</li>
+</ul>
+<hr>
+</div>
+<!-- ------------------------------------------------------------------------------------------------------------------------- --> 
 </body>
 </html>
