@@ -2,4 +2,4 @@ an(1,2,"Compare with BG 2.48 equanimity is yoga (samatvaM yoga uchyate) and BG 2
 an(1,12,"Same prescription of abhyasa and vairagya to control the mind in BG 6.35");
 an(3,18,"3.16 talks about past and future, whereas, 3.18 discusses only past lives, suggesting no future lives (mukti)?");
 an(3,18,"3.16 talks about knowledge of events across time, 3.17 about bhutas which are organizations of matter and energy in consciousness as a result of different transformations over time per 3.15, and then 3.18 gets to previous births of a human, the most advanced bhuta");
-
+an(3,38,"Patanjali provided a smorgasbord of siddhis, just like in the Kathopanishad, in which Yama offers various wealths in lieu of an answer to Naciketa's third question of what happens after death. The concept of sreyas vs. preyas. If one got this far without getting stuck on vibhutis/siddhis, then the chapter on kaivalya is close at hand.");
