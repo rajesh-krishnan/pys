@@ -1,3 +1,5 @@
-an(1,1,"BEGIN TEST <em>Now begin yoga without being distracted by the pop-psychology of the power of now</em> END TEST");
-an(2,5,"Test my personal notes <b>including HTML</b>");
-an(2,5,"Added second note");
+an(1,2,"Compare with BG 2.48 equanimity is yoga (samatvaM yoga uchyate) and BG 2.50 yoga is working skillfully (yogaH karmasu kaushalam)"); 
+an(1,12,"Same prescription of abhyasa and vairagya to control the mind in BG 6.35");
+an(3,18,"3.16 talks about past and future, whereas, 3.18 discusses only past lives, suggesting no future lives (mukti)?");
+an(3,18,"3.16 talks about knowledge of events across time, 3.17 about bhutas which are organizations of matter and energy in consciousness as a result of different transformations over time per 3.15, and then 3.18 gets to previous births of a human, the most advanced bhuta");
+
