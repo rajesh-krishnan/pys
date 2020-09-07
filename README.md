@@ -1,4 +1,3 @@
-# pys: Patanjala Yogasutrani (पातञ्जल योगसुत्राणि)
+# pys: Patanjala Yogasutrani
 
-Computational resources for the study of yoga. 
-Now, the instuction of yoga: [pys.html](pys.html)
+Computational resources for the study of yoga: [pys.html](https://rajesh-krishnan.github.io/pys.github.io/pys.html)
