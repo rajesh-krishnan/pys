@@ -433,6 +433,14 @@ patanjali_data["patanjali"] = [[
 "puruShaarthashuunyaanaaM guNaanaaM pratiprasavaH kaivalyaM svaruupapratiShThaa vaa chitishaktiriti ||34||",
 ]];
 /********************************************************************************************************************************/
+/* English translation of the Vyasabhashyam by Ganganath Jha */
+patanjali_data["vyasagj"] = [[
+],[
+],[
+],[
+]];
+
+/********************************************************************************************************************************/
 /* English translation from The Yoga Sutras of Patanjali (Sri Swami Satchidananda) */
 patanjali_data["satchidananda"] = [[
 "1. Now the exposition of Yoga is being made.",
@@ -2054,10 +2062,6 @@ patanjali_data["vivekananda"] = [[
 "34. The resolution in the inverse order of the qualities, bereft of any motive of action for the Purusha, is Kaivalya, or it is the establishment of the power of knowledge in its own nature.",
 ]];
 /********************************************************************************************************************************/
-/* 
-XXX: "vyasa";
-*/
-/********************************************************************************************************************************/
 </script>
 <!-- ------------------------------------------------------------------------------------------------------------------------- --> 
 <!-- <script src="convert-data-sa.js"  type="text/javascript"></script>                                                        -->
@@ -2440,15 +2444,9 @@ function showsutra(nav) {
   document.getElementById("pitrans").innerHTML        = INtranslit["u2itrans"](p);
   document.getElementById("piast").innerHTML          = INtranslit["u2iast"](p);
 
-  //var v  = d["vyasa"]     ? INtranslit["itrans2u"](d["vyasa"])     : "";
-  //document.getElementById("vunicode").innerHTML       = INtranslit["u2devanagari"](v);
-  //document.getElementById("vitrans").innerHTML        = INtranslit["u2itrans"](v);
-  //document.getElementById("viast").innerHTML          = INtranslit["u2iast"](v);
-
   function g(x,idx) { var q = patanjali_data[x][pnum][snum]; document.getElementById(x).innerHTML = q ? q : ""; }
-  var flds = ["vivekananda", "satchidananda", "venkatesananda", "pradipaka", 
-              "bksiyengar", "cisherwood", "tkvdesikachar", "jnanesvara", "notes",
-              /* "ganganathV", "ganganathP", "meanings", "grammar", "xref", "refs" */ ];
+  var flds = ["vivekananda", "satchidananda", "venkatesananda", "pradipaka", "bksiyengar", 
+              "cisherwood", "tkvdesikachar", "jnanesvara", "vyasagj", "notes"];
   flds.forEach(g);
 
   setChantVideoAttrib(patanjali_data["videocues"][pnum][snum][0], patanjali_data["videocues"][pnum][snum][1]);
@@ -2541,21 +2539,19 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 <!-- ------------------------------------------------------------------------------------------------------------------------- --> 
 <table width="1050px" style="border-collapse:collapse;">
 <tr><th style="text-align:left">_</th>              <th id="chapter" style="text-align:left"> </th></tr>
-<tr><td width="200px">Patanjali (Devanagari):</td>  <td id="punicode" width="800">            </td></tr>
-<tr><td>Patanjali (ITRANS):</td>                    <td id="pitrans">                         </td></tr>
-<tr><td>Patanjali (IAST):</td>                      <td id="piast">                           </td></tr>
-<tr><td>Swami Satchidananda:</td>                   <td id="satchidananda">                   </td></tr>
-<tr><td>Swami Vivekananda:</td>                     <td id="vivekananda">                     </td></tr>
-<tr><td>Gabriel Pradipaka:</td>                     <td id="pradipaka">                       </td></tr>
-<tr><td>Swami Venkatesananda:</td>                  <td id="venkatesananda">                  </td></tr>
-<tr><td>B.K.S. Iyengar:</td>                        <td id="bksiyengar">                      </td></tr>
-<tr><td>Chris Isherwood:</td>                       <td id="cisherwood">                      </td></tr>
-<tr><td>T.K.V. Desikachar:</td>                     <td id="tkvdesikachar">                   </td></tr>
-<tr><td>Swami Jnanesvara Bharati:</td>              <td id="jnanesvara">                      </td></tr>
-<tr><td>Notes:</td>                                 <td id="notes">                           </td></tr>
-<!--
-<tr><td>Vyasa trans. Ganganath Jha:</td>            <td id="ganganathV">                      </td></tr>
--->
+<tr><td width="200px">Patanjali (Devanagari)</td>  <td id="punicode" width="800">            </td></tr>
+<tr><td>Patanjali (ITRANS)</td>                    <td id="pitrans">                         </td></tr>
+<tr><td>Patanjali (IAST)</td>                      <td id="piast">                           </td></tr>
+<tr><td>Swami Satchidananda</td>                   <td id="satchidananda">                   </td></tr>
+<tr><td>Swami Vivekananda</td>                     <td id="vivekananda">                     </td></tr>
+<tr><td>Gabriel Pradipaka</td>                     <td id="pradipaka">                       </td></tr>
+<tr><td>Swami Venkatesananda</td>                  <td id="venkatesananda">                  </td></tr>
+<tr><td>B.K.S. Iyengar</td>                        <td id="bksiyengar">                      </td></tr>
+<tr><td>Chris Isherwood</td>                       <td id="cisherwood">                      </td></tr>
+<tr><td>T.K.V. Desikachar</td>                     <td id="tkvdesikachar">                   </td></tr>
+<tr><td>Swami Jnanesvara Bharati</td>              <td id="jnanesvara">                      </td></tr>
+<tr><td>Vyasa translated by<br>Ganganath Jha</td>  <td id="vyasagj">                         </td></tr>
+<tr><td>Notes</td>                                 <td id="notes">                           </td></tr>
 </table>
 <p>
 <!-- ------------------------------------------------------------------------------------------------------------------------- --> 
