@@ -27,6 +27,153 @@ function an(p,s,t) {
   patanjali_data["notes"][p-1][s-1] += t + '<br>'; 
 }
 /********************************************************************************************************************************/
+/* Timestamps in chanting */
+patanjali_data["videocues"] = [[
+[54,59],
+[59,63],
+[63,70],
+[70,75],
+[75,82],
+[82,90],
+[90,96],
+[96,104],
+[104,112],
+[112,120],
+[120,126],
+[126,133],
+[133,139],
+[139,149],
+[149,160],
+[160,168],
+[168,177],
+[177,186],
+[186,193],
+[193,202],
+[202,208],
+[208,216],
+[216,221],
+[221,233],
+[233,239],
+[239,247],
+[247,251],
+[251,255],
+[255,263],
+[263,281],
+[281,291],
+[291,298],
+[298,313],
+[313,321],
+[321,329],
+[329,334],
+[334,339],
+[339,345],
+[345,350],
+[350,357],
+[357,372],
+[372,382],
+[382,391],
+[391,402],
+[402,409],
+[409,414],
+[414,420],
+[420,426],
+[426,436],
+[436,442],
+[442,450]
+],[
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0]
+],[
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0],
+[0,0]
+]];
+/********************************************************************************************************************************/
 /* Patanjali yogasutrani in Sanskrit in ITRANS format */
 patanjali_data["patanjali"] = [[
 "atha yogaanushaasanam ||1||",
@@ -2230,6 +2377,11 @@ function idx_rangechecked(nav) {
   document.getElementById("sutra").value  = snum + 1;
   return [pnum,snum];
 };
+function setChantVideoAttrib(startval,endval) {
+  var x =`https://www.youtube.com/embed/YLywGythSWw?start=${startval}&end=${endval}&version=3`;
+  var frm = document.getElementById("schanchant");
+  frm.setAttribute("src", x);
+};
 function showsutra(nav) {
   var [pnum,snum] = idx_rangechecked(nav);
   var cS = patanjali_data["padas"][pnum]['pS'];
@@ -2252,6 +2404,8 @@ function showsutra(nav) {
               "bksiyengar", "cisherwood", "tkvdesikachar", "jnanesvara", "notes",
               /* "ganganathV", "ganganathP", "meanings", "grammar", "xref", "refs" */ ];
   flds.forEach(g);
+
+  setChantVideoAttrib(patanjali_data["videocues"][pnum][snum][0], patanjali_data["videocues"][pnum][snum][1]);
 };
 function Translit(conv) { 
   var q;
@@ -2276,7 +2430,7 @@ function playAudio() {
   msg.rate = 1.2;
   msg.text = document.getElementById("satchidananda").innerHTML;
   window.speechSynthesis.speak(msg);
-}
+};
 </script>
 <!-- ------------------------------------------------------------------------------------------------------------------------- --> 
 <!-- Load personal notes stored in mynotes.txt if any                                                                                                -->
@@ -2303,12 +2457,13 @@ table, td { border: 1px solid black; }
 <label for="cbox3">About</label>
 <input type="checkbox" id="cbox4" name="cbox4" value="resources" onclick="showMe('resources',this)" />
 <label for="cbox4">Resources</label>
+<input type="checkbox" id="cbox5" name="cbox5" value="chantbox" onclick="showMe('chantbox',this)" />
+<label for="cbox5">Chant</label>
 <p>
 <!-- ------------------------------------------------------------------------------------------------------------------------- --> 
 <div id="prayer" style="display:none">
 <hr>
 <h2>Prarthana (प्रार्थना) - Prayers</h2>
-
 <pre>
 ॐ सह नाववतु ।
 सह नौ भुनक्तु ।
@@ -2351,13 +2506,13 @@ I am going to study the Yoga Sutras of Patanjali.
 <label for="sutra">Sutra:</label>
 <input type="number" name="sutra" id="sutra" size=2 min=1 max=56 value=1 />
 <input type="button" name="go" id="go" value="Go" onclick="showsutra('.')" />
-<input type="button" name="pbwd" id="pbwd" value="<<"  onclick="showsutra('<<')" />
-<input type="button" name="pbeg" id="pbeg" value="<|"  onclick="showsutra('<|')" />
-<input type="button" name="sbwd" id="sbwd" value="<"   onclick="showsutra('<')" />
-<input type="button" name="sfwd" id="sfwd" value=">"   onclick="showsutra('>')" />
-<input type="button" name="pend" id="pend" value="|>"  onclick="showsutra('|>')" />
-<input type="button" name="pfwd" id="pfwd" value=">>"  onclick="showsutra('>>')" />
-<input type="button" name="aud" id="aud" value="Read"  onclick="playAudio()" />
+<input type="button" name="pbwd" id="pbwd" value="<<"   onclick="showsutra('<<')" />
+<input type="button" name="pbeg" id="pbeg" value="<|"   onclick="showsutra('<|')" />
+<input type="button" name="sbwd" id="sbwd" value="<"    onclick="showsutra('<')" />
+<input type="button" name="sfwd" id="sfwd" value=">"    onclick="showsutra('>')" />
+<input type="button" name="pend" id="pend" value="|>"   onclick="showsutra('|>')" />
+<input type="button" name="pfwd" id="pfwd" value=">>"   onclick="showsutra('>>')" />
+<input type="button" name="aud" id="aud" value="Read"   onclick="playAudio()" />
 <p>
 <!-- ------------------------------------------------------------------------------------------------------------------------- --> 
 <table width="1050" style="border-collapse:collapse;">
@@ -2386,8 +2541,12 @@ I am going to study the Yoga Sutras of Patanjali.
 <tr><td>External References:</td>                 <td id="refs">                            </td></tr>
 -->
 </table>
-You can learn to chant the sutras from the Sanskrit Channel on YouTube: <a href="https://www.youtube.com/watch?v=YLywGythSWw">chanting</a> or <a href="https://www.youtube.com/watch?v=K6tuUaUhsyQ">chanting with narrated English meanings</a>.
 <p>
+<!-- ------------------------------------------------------------------------------------------------------------------------- --> 
+<div id="chantbox" style="display:none">
+You can learn to chant the sutras from the Sanskrit Channel on YouTube:<p>
+<iframe id="schanchant" width="192" height="108" src="https://www.youtube.com/embed/YLywGythSWw?start=0&end=1653&version=3" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 <!-- ------------------------------------------------------------------------------------------------------------------------- --> 
 <div id="dicttool" style="display:none">
 <hr>
