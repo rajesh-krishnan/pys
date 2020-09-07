@@ -2627,7 +2627,7 @@ Error: Embedded data could not be displayed.
 <!-- ------------------------------------------------------------------------------------------------------------------------- --> 
 <div id="translittool" style="display:none">
 <hr>
-<b>ITRANS<=>Devanagari Transliteration</b>
+<b>Transliteration between ITRANS (ASCII) and Devanagari (Unicode)</b>
 <br>
 <textarea id="ttitrans" rows="1" cols="65" spellcheck="false" autocomplete="off"></textarea>
 <input type="button" name="i2d" id="i2d" value="<" onclick="Translit('<')" />
@@ -2640,25 +2640,23 @@ Error: Embedded data could not be displayed.
 <hr>
 <h2>About Patanjala Yogasutrani</h2>
 
-The objective of this work is to support the study of Yoga, which is one of the six aastika darshanas of Sanatana Dharma; any academic or technical excursions are incidental to the core pursuit. The associated software repository is hosted on <a href="https://github.com/rajesh-krishnan/pys.github.io">github/</a>. This is a work in progress.<p>
+The objective of this work is to support the study of Yoga, which is one of the six aastika darshanas of Sanatana Dharma; any academic or technical excursions are incidental to the core pursuit. 
+
+Through a web page, we support navigation of the yoga sutras by chapter and verse. For each verse, we provide the chapter name, chapter number, verse number, and verse text (in Devanagari Unicode, ITRANS, and IAST formats). We provide English translations from several sources. We provide browser-based basic speech-to-text of the original verse and one English translation. We also provide links to a traditional chant of each verse. We provide an interface to an online Sanskrit-English dictionary, as well as a tool for transliteration between ITRANS and Devanagari Unicode. Additional notes by the editor for each sutra is included.<p>
+
+The associated software repository is hosted on <a href="https://github.com/rajesh-krishnan/pys.github.io">github</a>. This is a work in progress. For now, we are attempting a client-side solution with static content that can be hosted locally or on a webserver; a modern browser supporting Javascript, HTML, and CSS should suffice. We were originally planning to release this software under the Unlicense, but unfortunately, the transliteration code by <a href="http://shreevatsa.appspot.com/sanskrit/transliterate.html">Shreevatsaji</a> has a GPLv2 or higher license. Note that we have edited the transliteration code slightly to include the pranava (Om symbol).<p>
 
 Although the Patanjala yoga darshana is limited to using pratyaksha, anumana, and agama, we include references to works by those who apply a vedantic interpretation (admitting upama, anupalabdhi, and athApatti as pramanas). Although the Patanjala Yoga Darshana is agamic, we do not exclude translations and references to other nigamic, smriti, and puranic sources; nor do we exclude sources from other traditions. We follow Veda Vyasa, Srimad Adi Shankara Bhagadpada, and Swami Sivananda Sarawasti, who maintain there is harmony between the yoga and vedanta darsharnas. As we do not include full commentaries, and only quote translations from other sources, we believe this constitutes fair use of quoted material. <p>
 
-We encode Sanskrit using ITRANS. Through a web page ('pys.html'), we support navigation by chapter and verse. For each verse, the web page provides the chapter name, chapter number, verse number, and verse text (in Devnagari Unicode, ITRANS, and IAST formats). For comparison, we provide English translations from several sources. We provide an interface to a ITRANS to Devangarai Unicode and IAST transliteration tool as well as to an online Sanskrit dictionary. Users can add their notes for each sutra to an optional file, and see them with the included translations.<p>
-
-For now, we are attempting a client-side solution with static content that can be hosted locally or on a webserver; a modern browser supporting Javascript, HTML, and CSS should suffice. We were originally planning to release this software under the Unlicense, but unfortunately, the transliteration code by <a href="http://shreevatsa.appspot.com/sanskrit/transliterate.html">Shreevatsaji</a> has a GPLv2 or higher license. Note that we have edited the transliteration code slightly to include the pranava (Om symbol).<p>
-
-<b>Future Work:</b> Future versions of this code may include:
+Future versions may include:
 <ol>
   <li>Maharishi Veda Vyasa's commentary (in Devanagari Unicode, ITRANS, and IAST formats) along with translations</li>
-  <li>Cross references to related verses</li>
-  <li>References to other classical yoga texts</li>
-  <li>Modern translations by others</li>
-  <li>Classical commentaries by Rajabhoja and others</li>
+  <li>Additional notes with cross references to related verses, references to other classical yoga texts, and other commentary</li>
+  <li>Grammatical analysis of the sutras by computer</li>
+  <li>Index of root words (dhatus) in the sutras</li>
+  <li>Personal research notes for each sutra, loaded from a user-specified file</li>
 </ol>
 
-Currently we provide audio enunciation using the built-in text-to-speech synthesis in the browser; we are looking for better alternatives for properly
-enunciated Sanskrit speech. We are also investigating approaches to provide grammatical analysis of the sutras done either manually or by computer.<p>
 <hr>
 </div>
 <!-- ------------------------------------------------------------------------------------------------------------------------- --> 
@@ -2666,12 +2664,9 @@ enunciated Sanskrit speech. We are also investigating approaches to provide gram
 <hr>
 <h2>Resources for further study</h2>
 
-We list the major texts on yoga and some commentaries on the Patanjala Yogasutrani. We may provide additional notes and links in the future on yoga texts as well as sanskrit learning resources.<p>
+We list the major texts on yoga and some commentaries on the Patanjala Yogasutrani. Each text and commentary views the subject through the philosophical lens of a particular school, and some words do not translate well. Please consult a traditional guru who has both scriptural and experiential knowledge in order to avoid misconceptions when studying these texts.<p>
 
-<h3>Major texts on yoga</h3>
-
-<ul>
-<li>Yoga Upanishads
+<h3>Yoga Upanishads</h3>
 <ul>
 <li>Hamsa Upanishad</li>
 <li>Amritabindu Upanishad</li>
@@ -2685,11 +2680,7 @@ We list the major texts on yoga and some commentaries on the Patanjala Yogasutra
 <li>Trishikhibrahmana Upanishad</li>
 <li>Yogachudamani Upanishad</li>
 <li>Mandala-brahmana Upanishad</li>
-<li>Advayataraka Upanishad
-<ul>
-<li>Patanjali defines Ishvara in terms of Guru; this Upanishad defines Guru</li>
-</ul>
-</li>
+<li>Advayataraka Upanishad</li>
 <li>Shandilya Upanishad</li>
 <li>Yogashikha Upanishad</li>
 <li>Pashupatabrahma Upanishad</li>
@@ -2698,21 +2689,19 @@ We list the major texts on yoga and some commentaries on the Patanjala Yogasutra
 <li>Mahavakya Upanishad</li>
 <li>Varaha Upanishad</li>
 </ul>
-</li>
+
+<h3>Major texts on yoga</h3>
+<ul>
 <li>Srimad Bhagavad Gita</li>
-<li>Yoga Vasishta</li>
 <li>Patanjala Yogasutrani</li>
+<li>Yoga Vasishta</li>
 <li>Hatha Yoga Pradipika</li>
 <li>Gheranda Samhita</li>
 <li>Shiva Samhita</li>
 <li>Goraksha Samhita</li>
 </ul>
 
-<h3>Commentaries on Patanjala Yogasutrani</h3>
-
-To avoid misconceptions when reading translations and commentaries, consult a traditional guru who has both scriptural and experiential knowledge; each commentary views the subject through the philosophical lens of a particular school.<p>
-
-<h4>Classical Commentaries</h4>
+<h3>Classical commentaries on Patanjala Yogasutrani</h3>
 <ul>
 <li>Patanjala Yogadarshana by Maharshi Veda Vyasa
 <ul>
@@ -2723,12 +2712,12 @@ To avoid misconceptions when reading translations and commentaries, consult a tr
 <li>... several others</li>
 </ul>
 
-<h4>Modern Translations and Commentaries</h4>
+<h3>Modern Translations and Commentaries on Patanjala Yogasutrani</h3>
 <ul>
 <li>Raja Yoga by Swami Vivekananda</li>
 <li>The Yoga Sutras of Patanjali by Swami Satchidananda</li>
-<li>Others included in the accompanying tool, including Swami Venkatesananda, B.K.S. Iyengar, T.K.V. Desikachar, Chris Isherwood, Swami Jnanesvara Bharati, Gabriel Pradipaka</li>
-<li>... numerous others</li>
+<li>Others included in the accompanying tool: Swami Venkatesananda, B.K.S. Iyengar, T.K.V. Desikachar, Chris Isherwood, Swami Jnanesvara Bharati, Gabriel Pradipaka</li>
+<li>... several others</li>
 </ul>
 <hr>
 </div>
