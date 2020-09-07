@@ -194,40 +194,40 @@ patanjali_data["videocues"] = [[
 [1315,1325],
 [1325,1332]
 ],[
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0]
+[1351,1358],
+[1358,1364],
+[1364,1373],
+[1373,1380],
+[1380,1386],
+[1386,1391],
+[1391,1398],
+[1398,1406],
+[1406,1417],
+[1417,1424],
+[1424,1434],
+[1434,1441],
+[1441,1447],
+[1447,1452],
+[1452,1459],
+[1459,1468],
+[1468,1476],
+[1476,1486],
+[1486,1491],
+[1491,1496],
+[1496,1506],
+[1506,1514],
+[1514,1520],
+[1520,1530],
+[1530,1536],
+[1536,1543],
+[1543,1549],
+[1549,1554],
+[1554,1566],
+[1566,1569],
+[1569,1579],
+[1579,1587],
+[1587,1594],
+[1594,1608]
 ]];
 /********************************************************************************************************************************/
 /* Patanjali yogasutrani in Sanskrit in ITRANS format */
@@ -2481,16 +2481,19 @@ function Translit(conv) {
   }
 };
 function showMe(it, box) { var vis = (box.checked) ? "block" : "none"; document.getElementById(it).style.display = vis; };
-function playAudio() {
+function playAudio(what) {
   var msg = new SpeechSynthesisUtterance();
-  msg.lang = 'hi';
-  msg.rate = 0.6;
-  msg.text = document.getElementById("pitrans").innerHTML;
-  window.speechSynthesis.speak(msg);
-  msg.lang = 'en-US';
-  msg.rate = 1.2;
-  msg.text = document.getElementById("satchidananda").innerHTML;
-  window.speechSynthesis.speak(msg);
+  if (what=="patanjali") {
+    msg.lang = 'hi';
+    msg.rate = 0.6;
+    msg.text = document.getElementById("pitrans").innerHTML;
+    window.speechSynthesis.speak(msg);
+  } else if (what=="satchidananda") {
+    msg.lang = 'en-US';
+    msg.rate = 1.2;
+    msg.text = document.getElementById("satchidananda").innerHTML;
+    window.speechSynthesis.speak(msg);
+  };
 };
 </script>
 <!-- ------------------------------------------------------------------------------------------------------------------------- --> 
@@ -2508,6 +2511,8 @@ table, td { border: 1px solid black; }
 <body onload="showsutra('.')">
 <h1>पातञ्जल योगसुत्राणि : Patanjala Yogasutrani</h1>
 <!-- ------------------------------------------------------------------------------------------------------------------------- --> 
+<table style="border:0px; border-collapse:collapse"><tr>
+<td style="border:0px" height="120px" width="700px" align="center""><div>
 <input type="checkbox" id="cbox0" name="cbox0" value="prayer" onclick="showMe('prayer',this)" />
 <label for="cbox0">Prayer</label>
 <input type="checkbox" id="cbox1" name="cbox1" value="dicttool" onclick="showMe('dicttool',this)" />
@@ -2520,6 +2525,55 @@ table, td { border: 1px solid black; }
 <label for="cbox4">Resources</label>
 <input type="checkbox" id="cbox5" name="cbox5" value="chantbox" onclick="showMe('chantbox',this)" />
 <label for="cbox5">Chant</label>
+<p>
+<input type="button" name="rand" id="rand" value="Random" onclick="randsutra()" />
+<label for="pada">Pada:</label>
+<input type="number" name="pada" id="pada" size=1 min=1 max=4 value=1 />
+<label for="sutra">Sutra:</label>
+<input type="number" name="sutra" id="sutra" size=2 min=1 max=56 value=1 />
+<input type="button" name="go" id="go" value="Go"         onclick="showsutra('.')" />
+<input type="button" name="pbwd" id="pbwd" value="<<"     onclick="showsutra('<<')" />
+<input type="button" name="pbeg" id="pbeg" value="<|"     onclick="showsutra('<|')" />
+<input type="button" name="sbwd" id="sbwd" value="<"      onclick="showsutra('<')" />
+<input type="button" name="sfwd" id="sfwd" value=">"      onclick="showsutra('>')" />
+<input type="button" name="pend" id="pend" value="|>"     onclick="showsutra('|>')" />
+<input type="button" name="pfwd" id="pfwd" value=">>"     onclick="showsutra('>>')" />
+<p>
+<input type="button" name="aud"  id="aud"  value="Read Patanjali"     onclick="playAudio('patanjali')" />
+<input type="button" name="aud"  id="aud"  value="Read Satchidananda" onclick="playAudio('satchidananda')" />
+<p>
+</div></td>
+<td width="210" style="border:0" align="center"><div id="chantbox" style="display:none">
+<iframe id="schanchant" width="192" height="108" src="https://www.youtube.com/embed/YLywGythSWw?start=0&end=1653&version=3" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div></td>
+</tr></table>
+<!-- ------------------------------------------------------------------------------------------------------------------------- --> 
+<table width="1050" style="border-collapse:collapse;">
+<tr><th style="text-align:left">_</th>            <th id="chapter" style="text-align:left"> </th></tr>
+<tr><td width="250">Patanjali (Devanagari):</td>  <td id="punicode" width="750">            </td></tr>
+<tr><td>Patanjali (ITRANS):</td>                  <td id="pitrans">                         </td></tr>
+<tr><td>Patanjali (IAST):</td>                    <td id="piast">                           </td></tr>
+<tr><td>Swami Satchidananda:</td>                 <td id="satchidananda">                   </td></tr>
+<tr><td>Swami Vivekananda:</td>                   <td id="vivekananda">                     </td></tr>
+<tr><td>Gabriel Pradipaka:</td>                   <td id="pradipaka">                       </td></tr>
+<tr><td>Swami Venkatesananda:</td>                <td id="venkatesananda">                  </td></tr>
+<tr><td>B.K.S. Iyengar:</td>                      <td id="bksiyengar">                      </td></tr>
+<tr><td>Chris Isherwood:</td>                     <td id="cisherwood">                      </td></tr>
+<tr><td>T.K.V. Desikachar:</td>                   <td id="tkvdesikachar">                   </td></tr>
+<tr><td>Swami Jnanesvara Bharati:</td>            <td id="jnanesvara">                      </td></tr>
+<tr><td>Notes:</td>                               <td id="notes">                           </td></tr>
+<!--
+<tr><td>Maharishi Vyasa (Devanagari):</td>        <td id="vunicode">                        </td></tr>
+<tr><td>Maharishi Vyasa (ITRANS):</td>            <td id="vitrans">                         </td></tr>
+<tr><td>Maharishi Vyasa (IAST):</td>              <td id="viast">                           </td></tr>
+<tr><td>Ganganath Jha on Vyasa:</td>              <td id="ganganathV">                      </td></tr>
+<tr><td>Ganganath Jha on Patanjali:</td>          <td id="ganganathP">                      </td></tr>
+<tr><td>Word Meanings:</td>                       <td id="meanings">                        </td></tr>
+<tr><td>Grammatical Analysis:</td>                <td id="grammar">                         </td></tr>
+<tr><td>Cross References:</td>                    <td id="xref">                            </td></tr>
+<tr><td>External References:</td>                 <td id="refs">                            </td></tr>
+-->
+</table>
 <p>
 <!-- ------------------------------------------------------------------------------------------------------------------------- --> 
 <div id="prayer" style="display:none">
@@ -2562,54 +2616,6 @@ I am going to study the Yoga Sutras of Patanjali.
 </div>
 <p>
 <!-- ------------------------------------------------------------------------------------------------------------------------- --> 
-<input type="button" name="rand" id="rand" value="Random" onclick="randsutra()" />
-<label for="pada">Pada:</label>
-<input type="number" name="pada" id="pada" size=1 min=1 max=4 value=1 />
-<label for="sutra">Sutra:</label>
-<input type="number" name="sutra" id="sutra" size=2 min=1 max=56 value=1 />
-<input type="button" name="go" id="go" value="Go"         onclick="showsutra('.')" />
-<input type="button" name="pbwd" id="pbwd" value="<<"     onclick="showsutra('<<')" />
-<input type="button" name="pbeg" id="pbeg" value="<|"     onclick="showsutra('<|')" />
-<input type="button" name="sbwd" id="sbwd" value="<"      onclick="showsutra('<')" />
-<input type="button" name="sfwd" id="sfwd" value=">"      onclick="showsutra('>')" />
-<input type="button" name="pend" id="pend" value="|>"     onclick="showsutra('|>')" />
-<input type="button" name="pfwd" id="pfwd" value=">>"     onclick="showsutra('>>')" />
-<input type="button" name="aud"  id="aud"  value="Read"   onclick="playAudio()" />
-<p>
-<!-- ------------------------------------------------------------------------------------------------------------------------- --> 
-<table width="1050" style="border-collapse:collapse;">
-<tr><th style="text-align:left">_</th>            <th id="chapter" style="text-align:left"> </th></tr>
-<tr><td width="250">Patanjali (Devanagari):</td>  <td id="punicode" width="750">            </td></tr>
-<tr><td>Patanjali (ITRANS):</td>                  <td id="pitrans">                         </td></tr>
-<tr><td>Patanjali (IAST):</td>                    <td id="piast">                           </td></tr>
-<tr><td>Swami Satchidananda:</td>                 <td id="satchidananda">                   </td></tr>
-<tr><td>Swami Vivekananda:</td>                   <td id="vivekananda">                     </td></tr>
-<tr><td>Gabriel Pradipaka:</td>                   <td id="pradipaka">                       </td></tr>
-<tr><td>Swami Venkatesananda:</td>                <td id="venkatesananda">                  </td></tr>
-<tr><td>B.K.S. Iyengar:</td>                      <td id="bksiyengar">                      </td></tr>
-<tr><td>Chris Isherwood:</td>                     <td id="cisherwood">                      </td></tr>
-<tr><td>T.K.V. Desikachar:</td>                   <td id="tkvdesikachar">                   </td></tr>
-<tr><td>Swami Jnanesvara Bharati:</td>            <td id="jnanesvara">                      </td></tr>
-<tr><td>Notes:</td>                               <td id="notes">                           </td></tr>
-<!--
-<tr><td>Maharishi Vyasa (Devanagari):</td>        <td id="vunicode">                        </td></tr>
-<tr><td>Maharishi Vyasa (ITRANS):</td>            <td id="vitrans">                         </td></tr>
-<tr><td>Maharishi Vyasa (IAST):</td>              <td id="viast">                           </td></tr>
-<tr><td>Ganganath Jha on Vyasa:</td>              <td id="ganganathV">                      </td></tr>
-<tr><td>Ganganath Jha on Patanjali:</td>          <td id="ganganathP">                      </td></tr>
-<tr><td>Word Meanings:</td>                       <td id="meanings">                        </td></tr>
-<tr><td>Grammatical Analysis:</td>                <td id="grammar">                         </td></tr>
-<tr><td>Cross References:</td>                    <td id="xref">                            </td></tr>
-<tr><td>External References:</td>                 <td id="refs">                            </td></tr>
--->
-</table>
-<p>
-<!-- ------------------------------------------------------------------------------------------------------------------------- --> 
-<div id="chantbox" style="display:none">
-You can learn to chant the sutras from the Sanskrit Channel on YouTube:<p>
-<iframe id="schanchant" width="192" height="108" src="https://www.youtube.com/embed/YLywGythSWw?start=0&end=1653&version=3" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-<!-- ------------------------------------------------------------------------------------------------------------------------- --> 
 <div id="dicttool" style="display:none">
 <hr>
 <object data="https://dsal.uchicago.edu/dictionaries/apte/" width="100%" height="350"> 
@@ -2621,11 +2627,12 @@ Error: Embedded data could not be displayed.
 <!-- ------------------------------------------------------------------------------------------------------------------------- --> 
 <div id="translittool" style="display:none">
 <hr>
-<h2>ITRANS<=>Devanagari Transliteration</h2>
-<textarea id="ttitrans" rows="1" cols="80" spellcheck="false" autocomplete="off"></textarea>
+<b>ITRANS<=>Devanagari Transliteration</b>
+<br>
+<textarea id="ttitrans" rows="1" cols="65" spellcheck="false" autocomplete="off"></textarea>
 <input type="button" name="i2d" id="i2d" value="<" onclick="Translit('<')" />
 <input type="button" name="d2i" id="d2i" value=">" onclick="Translit('>')" />
-<textarea id="ttdevan"  rows="1" cols="80" spellcheck="false" autocomplete="off"></textarea>
+<textarea id="ttdevan"  rows="1" cols="65" spellcheck="false" autocomplete="off"></textarea>
 <hr>
 </div>
 <!-- ------------------------------------------------------------------------------------------------------------------------- --> 
