@@ -81,62 +81,61 @@ patanjali_data["videocues"] = [[
 [436,442],
 [442,450]
 ],[
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0],
-[0,0]
+[470,477],
+[477,485],
+[485,492],
+[492,502],
+[502,512],
+[512,518],
+[518,522],
+[522,526],
+[526,534],
+[534,538],
+[538,544],
+[544,553],
+[553,559],
+[559,569],
+[569,582],
+[582,587],
+[587,593],
+[593,603],
+[603,611],
+[611,620],
+[620,625],
+[625,634],
+[634,644],
+[644,647],
+[647,656],
+[656,662],
+[662,668],
+[668,679],
+[679,692],
+[692,700],
+[700,711],
+[711,719],
+[719,726],
+[726,749],
+[749,758],
+[758,764],
+[764,772],
+[772,780],
+[780,787],
+[787,794],
+[794,804],
+[804,808],
+[808,814],
+[814,821],
+[821,826],
+[826,830],
+[830,836],
+[836,840],
+[840,850],
+[850,860],
+[860,868],
+[868,873],
+[873,878],
+[878,890],
+[890,895]
 ],[
 [0,0],
 [0,0],
@@ -2407,6 +2406,11 @@ function showsutra(nav) {
 
   setChantVideoAttrib(patanjali_data["videocues"][pnum][snum][0], patanjali_data["videocues"][pnum][snum][1]);
 };
+function randsutra() {
+  document.getElementById("pada").value  = Math.floor((Math.random() * 4) + 1);
+  document.getElementById("sutra").value = Math.floor((Math.random() * 56) + 1);
+  showsutra('.');
+};
 function Translit(conv) { 
   var q;
   if (conv=='>')  {
@@ -2501,18 +2505,19 @@ I am going to study the Yoga Sutras of Patanjali.
 </div>
 <p>
 <!-- ------------------------------------------------------------------------------------------------------------------------- --> 
+<input type="button" name="rand" id="rand" value="Random" onclick="randsutra()" />
 <label for="pada">Pada:</label>
 <input type="number" name="pada" id="pada" size=1 min=1 max=4 value=1 />
 <label for="sutra">Sutra:</label>
 <input type="number" name="sutra" id="sutra" size=2 min=1 max=56 value=1 />
-<input type="button" name="go" id="go" value="Go" onclick="showsutra('.')" />
-<input type="button" name="pbwd" id="pbwd" value="<<"   onclick="showsutra('<<')" />
-<input type="button" name="pbeg" id="pbeg" value="<|"   onclick="showsutra('<|')" />
-<input type="button" name="sbwd" id="sbwd" value="<"    onclick="showsutra('<')" />
-<input type="button" name="sfwd" id="sfwd" value=">"    onclick="showsutra('>')" />
-<input type="button" name="pend" id="pend" value="|>"   onclick="showsutra('|>')" />
-<input type="button" name="pfwd" id="pfwd" value=">>"   onclick="showsutra('>>')" />
-<input type="button" name="aud" id="aud" value="Read"   onclick="playAudio()" />
+<input type="button" name="go" id="go" value="Go"         onclick="showsutra('.')" />
+<input type="button" name="pbwd" id="pbwd" value="<<"     onclick="showsutra('<<')" />
+<input type="button" name="pbeg" id="pbeg" value="<|"     onclick="showsutra('<|')" />
+<input type="button" name="sbwd" id="sbwd" value="<"      onclick="showsutra('<')" />
+<input type="button" name="sfwd" id="sfwd" value=">"      onclick="showsutra('>')" />
+<input type="button" name="pend" id="pend" value="|>"     onclick="showsutra('|>')" />
+<input type="button" name="pfwd" id="pfwd" value=">>"     onclick="showsutra('>>')" />
+<input type="button" name="aud"  id="aud"  value="Read"   onclick="playAudio()" />
 <p>
 <!-- ------------------------------------------------------------------------------------------------------------------------- --> 
 <table width="1050" style="border-collapse:collapse;">
