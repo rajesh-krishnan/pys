@@ -2647,8 +2647,10 @@ function showsutra(nav) {
   setChantVideoAttrib(patanjali_data["videocues"][pnum][snum][0], patanjali_data["videocues"][pnum][snum][1]);
 };
 function randsutra() {
-  document.getElementById("pada").value  = Math.floor((Math.random() * 4) + 1);
-  document.getElementById("sutra").value = Math.floor((Math.random() * 56) + 1);
+  var pada = Math.floor((Math.random() * 4) + 1);
+  var ccnt = patanjali_data["padas"][pada - 1]['cnt'];
+  document.getElementById("pada").value = pada
+  document.getElementById("sutra").value = Math.floor((Math.random() * ccnt) + 1);
   showsutra('.');
 };
 function Translit(conv) { 
