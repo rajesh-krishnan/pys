@@ -2697,7 +2697,7 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 <body onload="showsutra('.')">
 <h1>पातञ्जल योगसुत्राणि : Patanjala Yogasutrani</h1>
 <!-- ------------------------------------------------------------------------------------------------------------------------- --> 
-<table style="border:0px; border-collapse:collapse; width=1050px;"><tr>
+<table style="border:0px; border-collapse:collapse; width:1050px;"><tr>
 <td style="border:0px; width="800px"><div>
 <input type="checkbox" id="cbox0" name="cbox0" value="prayer" onclick="showMe('prayer',this)" />
 <label for="cbox0">Prayer</label>
@@ -2712,21 +2712,25 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 <input type="checkbox" id="cbox5" name="cbox5" value="chantbox" checked="checked" onclick="showMe('chantbox',this)" />
 <label for="cbox5">Chant</label>
 <p>
-<input type="button" name="rand" id="rand" value="Random" onclick="randsutra()" />
+<hr>
 <label for="pada">Pada:</label>
 <input type="number" name="pada" id="pada" size=1 min=1 max=4 value=1 />
 <label for="sutra">Sutra:</label>
 <input type="number" name="sutra" id="sutra" size=2 min=1 max=56 value=1 />
 <input type="button" name="go" id="go" value="Go"         onclick="showsutra('.')" />
+<a>&nbsp;&nbsp;</a>
+<input type="button" name="rand" id="rand" value="Random" onclick="randsutra()" />
+<a>&nbsp;&nbsp;</a>
 <input type="button" name="pbwd" id="pbwd" value="<<"     onclick="showsutra('<<')" />
 <input type="button" name="pbeg" id="pbeg" value="<|"     onclick="showsutra('<|')" />
 <input type="button" name="sbwd" id="sbwd" value="<"      onclick="showsutra('<')" />
 <input type="button" name="sfwd" id="sfwd" value=">"      onclick="showsutra('>')" />
 <input type="button" name="pend" id="pend" value="|>"     onclick="showsutra('|>')" />
 <input type="button" name="pfwd" id="pfwd" value=">>"     onclick="showsutra('>>')" />
-<p>
+<a>&nbsp;&nbsp;</a>
 <input type="button" name="aud"  id="aud"  value="Read Patanjali"     onclick="playAudio('patanjali')" />
 <input type="button" name="aud"  id="aud"  value="Read Satchidananda" onclick="playAudio('satchidananda')" />
+<hr>
 <p>
 </div></td>
 <td width="200px" style="border:0" align="center"><div id="chantbox" style="display:block">
