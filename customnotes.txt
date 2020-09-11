@@ -1,0 +1,13 @@
+# You can add your own notes, e.g., '3.14: my own comment' will add a note
+# 'my own comment' in the Notes field for Pada 3 Sutra 14
+# Each sutra can have several notes, which appear in the order they are added
+# Notes for different sutras can be added in any order, just keep adding to end
+# WARNING: Do not use double-quotes, single quotes are okay
+# WARNING: Do not use '<' or '>' unless they are a valid HTML tag
+# WARNING: Each comment ends at the line break
+#
+1.1:My own notes on sutra 1.1
+1.2:Okay I have some insights on sutra 1.2 also
+1.1:Wait, I have 'more' to say on sutra 1.1
+1.1:I am <em>fancy</em> and I use formatting and breaks,<br>via <b>HTML</b> tags, and even Unicode &#x950;
+

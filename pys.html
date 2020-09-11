@@ -25,7 +25,7 @@ patanjali_data["notes"] = [{},{},{},{}];
 function an(p,s,t) { 
   if ((typeof patanjali_data["notes"][p-1][s-1]) === 'undefined') { patanjali_data["notes"][p-1][s-1] = ""; }
   patanjali_data["notes"][p-1][s-1] += t + '<br>'; 
-}
+};
 /********************************************************************************************************************************/
 /* Timestamps in chanting */
 patanjali_data["videocues"] = [[
@@ -2680,9 +2680,34 @@ function playAudio(what) {
     window.speechSynthesis.speak(msg);
   };
 };
+function addNote(line,idx) {
+  var x = line.split(/:/,1)[0].split(/\./,2); 
+  if (x.length == 2) {
+    var p = parseInt(x[0]); 
+    var s = parseInt(x[1]);
+    if (Number.isInteger(p) && Number.isInteger(s) && p > 0 && p < 5) {
+      var t = line.replace(/.+:/,'');
+      if (s > 0 && s <= patanjali_data["padas"][p-1]["cnt"]) { an(p,s,t); };
+    };
+  };
+};
+function loadNotesFile() {
+  patanjali_data["notes"] = [{},{},{},{}];
+  var fname = document.getElementById("personalNotesFile");
+  var fr = new FileReader();
+  fr.onload = (e) => { 
+    const data = e.target.result; 
+    const lines = data.split(/\r\n|\n/); 
+    lines.forEach(addNote);
+    alert("Personal notes loaded instead of editor's notes.");
+    showsutra('.');
+  }; 
+  fr.onerror = (e) => alert(e.target.error.name); 
+  fr.readAsText(fname.files[0]);
+}
 </script>
 <!-- ------------------------------------------------------------------------------------------------------------------------- --> 
-<!-- Load personal notes stored in mynotes.txt if any                                                                                                -->
+<!-- Load notes stored in mynotes.txt 
 <!-- ------------------------------------------------------------------------------------------------------------------------- --> 
 <script src="mynotes.txt" type="text/javascript"></script>
 <!-- ------------------------------------------------------------------------------------------------------------------------- --> 
@@ -2731,6 +2756,9 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 <input type="button" name="aud"  id="aud"  value="Read Patanjali"     title="Read Sutra aloud" onclick="playAudio('patanjali')" />
 <input type="button" name="aud"  id="aud"  value="Read Satchidananda" title="Read Swami Satchidananda's translation aloud" onclick="playAudio('satchidananda')" />
 <hr>
+<label for="myNotesFile">Load my file with personal study notes: </label>
+<input type="file" id="personalNotesFile" name="personalNotesFile" onchange="loadNotesFile()"/>
+<a href="customnotes.txt target="_self">[Download Sample]</a> 
 <p>
 </div></td>
 <td width="200px" style="border:0" align="center"><div id="chantbox" style="display:block">
