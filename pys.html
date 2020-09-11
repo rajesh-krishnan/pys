@@ -2756,9 +2756,6 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 <input type="button" name="aud"  id="aud"  value="Read Patanjali"     title="Read Sutra aloud" onclick="playAudio('patanjali')" />
 <input type="button" name="aud"  id="aud"  value="Read Satchidananda" title="Read Swami Satchidananda's translation aloud" onclick="playAudio('satchidananda')" />
 <hr>
-<label for="myNotesFile">Load my file with personal study notes: </label>
-<input type="file" id="personalNotesFile" name="personalNotesFile" onchange="loadNotesFile()"/>
-<a href="customnotes.txt target="_self">[Download Sample]</a> 
 <p>
 </div></td>
 <td width="200px" style="border:0" align="center"><div id="chantbox" style="display:block">
@@ -2783,6 +2780,11 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 <tr><td>Notes</td>                                 <td id="notes">                           </td></tr>
 </table>
 <p>
+<hr>
+<label for="myNotesFile">Load your own study notes: </label>
+<input type="file" id="personalNotesFile" name="personalNotesFile" onchange="loadNotesFile()"/>
+<a href="customnotes.txt" download="customnotes.txt">[Right click to download sample file]</a> 
+<hr>
 <!-- ------------------------------------------------------------------------------------------------------------------------- --> 
 <div id="prayer" style="display:none">
 <hr>
