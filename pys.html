@@ -24,7 +24,7 @@ patanjali_data["padas"] = [
 patanjali_data["notes"] = [{},{},{},{}];
 function an(p,s,t) { 
   if ((typeof patanjali_data["notes"][p-1][s-1]) === 'undefined') { patanjali_data["notes"][p-1][s-1] = ""; }
-  patanjali_data["notes"][p-1][s-1] += t + '<br>'; 
+  patanjali_data["notes"][p-1][s-1] += t + '<p>'; 
 };
 /********************************************************************************************************************************/
 /* Timestamps in chanting */
@@ -2686,7 +2686,7 @@ function addNote(line,idx) {
     var p = parseInt(x[0]); 
     var s = parseInt(x[1]);
     if (Number.isInteger(p) && Number.isInteger(s) && p > 0 && p < 5) {
-      var t = line.replace(/.+:/,'');
+      var t = line.replace(/[0-9\s]+\.[0-9\s]+:/,'');
       if (s > 0 && s <= patanjali_data["padas"][p-1]["cnt"]) { an(p,s,t); };
     };
   };
@@ -2707,9 +2707,15 @@ function loadNotesFile() {
 }
 </script>
 <!-- ------------------------------------------------------------------------------------------------------------------------- --> 
-<!-- Load notes stored in mynotes.txt 
+<!-- Load notes stored in editornotes.txt                                                                                      -->
 <!-- ------------------------------------------------------------------------------------------------------------------------- --> 
-<script src="mynotes.txt" type="text/javascript"></script>
+<script src="editorsnotes.txt" type="text/javascript"></script>
+<script type="text/javascript">
+var nlns = editors_notes.split(/\r\n|\n/);
+nlns.forEach(addNote);
+editors_notes="";
+nlns="";
+</script>
 <!-- ------------------------------------------------------------------------------------------------------------------------- --> 
 <!-- CSS Style Directives                                                                                                      -->
 <!-- ------------------------------------------------------------------------------------------------------------------------- --> 
