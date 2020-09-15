@@ -1,7 +1,8 @@
-1. Vyasa bhashyam
+0. Vyasa bhashyam
+1. Sources/acknowledgment
 2. Adjust chant offsets
 3. Proof-read, spell-check
-4. User-guide video
-5. Sources/acknowledgment
-6. Index <pada,sutra,wordpos,word,,dhatu,grammar>
+4. Adjust chant offsets
+5. Index <pada,sutra,wordpos,word,,dhatu,grammar>
+6. User-guide video
 
