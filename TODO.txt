@@ -1,6 +1,5 @@
-1. Sources/acknowledgment
-2. Spell-check vyasa, Proof-read all
+1. Index <pada,sutra,wordpos,word,,dhatu,grammar>
+2. Sources/acknowledgment
 3. Adjust chant offsets
-4. Index <pada,sutra,wordpos,word,,dhatu,grammar>
+4. Proof-read 
 5. User-guide video
-
