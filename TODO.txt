@@ -1,6 +1,6 @@
 0. Vyasa bhashyam
 1. Sources/acknowledgment
-2. Proof-read, spell-check
+2. Proof-read, spell-check (vija/bija)
 3. Adjust chant offsets
 4. Index <pada,sutra,wordpos,word,,dhatu,grammar>
 5. User-guide video
