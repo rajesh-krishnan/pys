@@ -13,6 +13,7 @@ var editors_notes = `
 2.32:The Shandilya and Varaha Upanishads, the Hatha Yoga Pradipika, verses 552 to 557 in Book 3 of the Tirumandhiram of Tirumular all suggest ten niyamas.
 3.18:Sutra 3.16 talks about past and future, whereas, 3.18 discusses only past lives, suggesting no future lives (mukti)?
 3.18:Sutra 3.16 talks about knowledge of events across time, 3.17 about bhutas which are organizations of matter and energy in consciousness as a result of different transformations over time per 3.15, and then 3.18 gets to previous births of a human, the most advanced bhuta
+3.24:See BG12.13 on friendliness and compassion
 3.38:Patanjali provided a smorgasbord of siddhis, just like in the Kathopanishad, in which Yama offers various wealths in lieu of an answer to Naciketa's third question of what happens after death. The concept of sreyas vs. preyas. If one got this far without getting stuck on vibhutis/siddhis, then the chapter on kaivalya is close at hand.
 
 `; // Do not delete this
